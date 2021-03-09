@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> Hotels API </title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}"/>
+
+</head>
+
+
+<body>
+
+<center> 
+<div class="login card bg-secondary shadow">
+
+    <h1> Predict Hotels Data </h1>
+    <form  action="/"method="post">
+        <label for="name">choose a hotel:</label>
+        <select name="name" id="name">
+            <option value="Courtyard by Marriott Mumbai International Airport">Courtyard by Marriott Mumbai International Airport</option>
+            <option value="President, Mumbai - IHCL SeleQtions"> President, Mumbai - IHCL SeleQtions</option>
+            <option value="The Orchid- Ecotel Mumbai Airport"> The Orchid- Ecotel Mumbai Airport</option>
+            <option value="Sofitel Mumbai BKC Hotel"> Sofitel Mumbai BKC Hotel</option>
+            <option value="The St. Regis Mumbai"> The St. Regis Mumbai</option>
+            <option value="Renaissance Mumbai Convention Centre Hotel">Renaissance Mumbai Convention Centre Hotel</option>
+            <option value="ITC Grand Central, a Luxury Collection Hotel, Mumbai">ITC Grand Central, a Luxury Collection Hotel, Mumbai</option>
+            <option value="Taj Mahal Tower, Mumbai"> Taj Mahal Tower, Mumbai</option>
+            <option value="OYO 24337 Akshaya Lodging"> OYO 24337 Akshaya Lodging</option>
+            <option value="Grand Hyatt Mumbai Hotel and Serviced Apartments"> Grand Hyatt Mumbai Hotel and Serviced Apartments</option>
+            <option value="Taj Lands End">Taj Lands End</option>
+            <option value="Ramee Techome">Ramee Techome</option>
+            <option value="Four Seasons Hotel Mumbai">Four Seasons Hotel Mumbai</option>
+            <option value="Taj Santacruz">Taj Santacruz</option>
+            <option value="Novotel Mumbai Juhu Beach Hotel">Novotel Mumbai Juhu Beach Hotel</option>
+            <option value="Boutique Hotel Bawa Suites">Boutique Hotel Bawa Suites</option>
+            <option value="JW Marriott Mumbai Sahar">JW Marriott Mumbai Sahar</option>
+            <option value="Trident Bandra Kurla Mumbai">Trident Bandra Kurla Mumbai</option>
+            <option value="Colaba Suites">Colaba Suites</option>
+            <option value="ibis Mumbai Airport Hotel">ibis Mumbai Airport Hotel</option>
+            <option value="The Taj Mahal Palace Mumbai">The Taj Mahal Palace Mumbai</option>
+            <option value="VITS Mumbai International Airport T2">VITS Mumbai International Airport T2</option>
+            <option value="Bawa International">Bawa International</option>
+            <option value="Hexa Airways">Hexa Airways</option>
+            <option value="Hyatt Regency Mumbai">Hyatt Regency Mumbai</option>
+            <option value="The Roa">The Roa</option>
+            <option value="The Leela Mumbai">The Leela Mumbai</option>
+            <option value="HOTEL BINDRA SUPREMACY">HOTEL BINDRA SUPREMACY</option>
+            <option value="Hotel Harbour View">Hotel Harbour View</option>
+            <option value="Trident, Nariman Point Mumbai">Trident, Nariman Point Mumbai</option>
+            <option value="The Park Mumbai">The Park Mumbai</option>
+            <option value="Executive Enclave">Executive Enclave</option>
+            <option value="Hotel Rang Sharda">Hotel Rang Sharda</option>
+            <option value="Bawa Regency">Bawa Regency</option>
+            <option value="Citizen Hotel">Citizen Hotel</option>
+            <option value="ibis Navi Mumbai Hotel">ibis Navi Mumbai Hotel</option>
+            <option value="Radisson Blu Mumbai International Airport">Radisson Blu Mumbai International Airport</option>
+            <option value="Hexa Axis">Hexa Axis</option>
+            <option value="Hotel Blue Orchid">Hotel Blue Orchid</option>
+            <option value="The Royal Orchid">The Royal Orchid</option>
+            <option value="Hotel Bawa Continental">Hotel Bawa Continental</option>
+            <option value="Residency Hotel - Fort - Mumbai">Residency Hotel - Fort - Mumbai</option>
+            <option value="The Empresa Hotel">The Empresa Hotel</option>
+            <option value="Chateau Windsor Hotel">Chateau Windsor Hotel</option>
+            <option value="Dragonfly Apartments Emerald">Dragonfly Apartments Emerald</option>
+            <option value="Hexa Nest">Hexa Nest</option>
+            <option value="Hotel Accord Mumbai">Hotel Accord Mumbai</option>
+            <option value="Hotel Accord Mumbai">Hotel Accord Mumbai</option>
+            <option value="Meluha - The Fern">Meluha - The Fern</option>
+            <option value="Hotel West inn">Hotel West inn</option>
+            <option value="Peninsula Grand Hotel">Peninsula Grand Hotel</option>
+            <option value="Niranta Transit Hotel Mumbai Airport">Niranta Transit Hotel Mumbai Airport</option>
+            <option value="Hotel Leafio Marigold Marol">Hotel Leafio Marigold Marol</option>
+            <option value="Svenska Design Hotel, Mumbai">Svenska Design Hotel, Mumbai</option>
+            <option value="Hexa Wellington">Hexa Wellington</option>
+            <option value="Radisson Mumbai Andheri MIDC">Radisson Mumbai Andheri MIDC</option>
+            <option value="Fariyas Hotel">Fariyas Hotel</option>
+            <option value="Hexa Magnet">Hexa Magnet</option>
+            <option value="The Oberoi Mumbai">The Oberoi Mumbai</option>
+            <option value="Hexa National">Hexa National</option>
+            <option value="Dragonfly Hotel - The Art Hotel">Dragonfly Hotel - The Art Hotel</option>
+            <option value="The Fern Goregaon">The Fern Goregaon</option>
+            <option value="Hotel Crawford Inn">Hotel Crawford Inn</option>
+            <option value="Ascot Hotel">Ascot Hotel</option>
+            <option value="Hotel Elphinstone Annexe">Hotel Elphinstone Annexe</option>
+            <option value="Courtyard by Marriott Pune Hinjewadi">Courtyard by Marriott Pune Hinjewadi</option>
+            <option value="Doubletree By Hilton Pune - Chinchwad">Doubletree By Hilton Pune - Chinchwad</option>
+            <option value="Hyatt Regency Pune & Residences">Hyatt Regency Pune & Residences</option>
+            <option value="Blue Diamond - IHCL SeleQtions">Blue Diamond - IHCL SeleQtions</option>
+            <option value="ibis Pune Viman Nagar Hotel">ibis Pune Viman Nagar Hotel</option>
+            <option value="Sheraton Grand Pune Bund Garden Hotel">Sheraton Grand Pune Bund Garden Hotel</option>
+            <option value="The Ritz-Carlton, Pune">The Ritz-Carlton, Pune</option>
+            <option value="Novotel Pune Viman Nagar Hotel">Novotel Pune Viman Nagar Hotel</option>
+            <option value="Country Club Hotel & Holidays LTD.">Country Club Hotel & Holidays LTD.</option>
+            <option value="HOTEL ROYAL ENCLAVE">HOTEL ROYAL ENCLAVE</option>
+            <option value="Hyatt Place Pune/Hinjawadi">Hyatt Place Pune/Hinjawadi</option>
+            <option value="Conrad Pune by Hilton">Conrad Pune by Hilton</option>
+            <option value="Choice Guest House Pune">Choice Guest House Pune</option>
+            <option value="Nest by Bird Of Paradise">Nest by Bird Of Paradise</option>
+            <option value="Marriott Suites Pune">Marriott Suites Pune</option>
+            <option value="Hotel Lxia">Hotel Lxia</option>
+            <option value="Pride Hotel">Pride Hotel</option>
+            <option value="The Orchid Hotel Pune Hinjewadi">The Orchid Hotel Pune Hinjewadi</option>
+            <option value="Radisson Blu Hotel Pune Kharadi">Radisson Blu Hotel Pune Kharadi</option>
+            <option value="Hotel Ashish Plaza">Hotel Ashish Plaza</option>
+            <option value="Hotel Nanashree Executive">Hotel Nanashree Executive</option>
+            <option value="Advantage 2U Hospitality Kalyani Nagar">Advantage 2U Hospitality Kalyani Nagar</option>
+            <option value="CELEBRATIONS INN">CELEBRATIONS INN</option>
+            <option value="Hotel Bhairavee">Hotel Bhairavee</option>
+            <option value="Shantai Hotel">Shantai Hotel</option>
+            <option value="Crowne Plaza Pune City Centre">Crowne Plaza Pune City Centre</option>
+            <option value="Lemon Tree Hotel Viman Nagar Pune">Lemon Tree Hotel Viman Nagar Pune</option>
+            <option value="Vivanta Pune, Hinjawadi">Vivanta Pune, Hinjawadi</option>
+            <option value="Hotel Rajdeep">Hotel Rajdeep</option>
+            <option value="Monarch Montvert, Baner Pune">Monarch Montvert, Baner Pune</option>
+            <option value="The Haven Serviced Residences">The Haven Serviced Residences</option>
+            <option value="The O Hotel">The O Hotel</option>
+            <option value="Hotel Sagar Plaza">Hotel Sagar Plaza</option>
+            <option value="Hotel Parc Estique">Hotel Parc Estique</option>
+            <option value="Keys Select Pimpri - By Lemon Tree Hotels">Keys Select Pimpri - By Lemon Tree Hotels</option>
+            <option value="The Hotel Hindusthan International">The Hotel Hindusthan International</option>
+            <option value="Maurya Residency">Maurya Residency</option>
+            <option value="ibis Pune Hinjewadi Hotel">ibis Pune Hinjewadi Hotel</option>
+            <option value="OYO 40687 Silver Star Executive">OYO 40687 Silver Star Executive</option>
+            <option value="Cocoon Hotel">Cocoon Hotel</option>
+            <option value="Hotel Swan Inn">Hotel Swan Inn</option>
+            <option value="Silverkey Executive Stays 36722 Near Bachpan Play School">Silverkey Executive Stays 36722 Near Bachpan Play School</option>
+            <option value="Hyatt Pune">Hyatt Pune</option>
+            <option value="The Fern Residency,MIDC">The Fern Residency,MIDC</option>
+            <option value="Noorya Hometel">Noorya Hometel</option>
+            <option value="Hotel Shree Panchratna">Hotel Shree Panchratna</option>
+            <option value="Hotel Shivam">Hotel Shivam</option>
+            <option value="Iris Hotel">Iris Hotel</option>
+            <option value="Hotel Crystal Court">Hotel Crystal Court</option>
+            <option value="The Sirona Hotel">The Sirona Hotel</option>
+            <option value="OYO 17121 Hotel Yashraj Inn">OYO 17121 Hotel Yashraj Inn</option>
+            <option value="Treebo Trend Naunidh Suites">Treebo Trend Naunidh Suites</option>
+            <option value="Hotel Basera">Hotel Basera</option>
+            <option value="Hotel Bhooshan Sivajinagar">Hotel Bhooshan Sivajinagar</option>
+            <option value="Hotel Orchard Pune">Hotel Orchard Pune</option>
+            <option value="Choice Classic Hotel">Choice Classic Hotel</option>
+            <option value="7 Apple Hotel Pimpri Pune">7 Apple Hotel Pimpri Pune</option>
+            <option value="Hotel Shreyas">Hotel Shreyas</option>
+            <option value="Hotel Aura">Hotel Aura</option>
+            <option value="Hotel RutuGandh Heritage">Hotel RutuGandh Heritage</option>
+            <option value="Ramee Grand Hotel and Spa, Pune">Ramee Grand Hotel and Spa, Pune</option>
+            <option value="The Corinthians Resort & Club">The Corinthians Resort & Club</option>
+            <option value="Tarawade Clarks Inn">Tarawade Clarks Inn</option>
+            <option value="OYO 26855 Kailasdham">OYO 26855 Kailasdham</option>
+            <option value="Hotel Centurion Inn">Hotel Centurion Inn</option>
+            <option value="Country Club Hotel & Holidays LTD.">Country Club Hotel & Holidays LTD.</option>
+            <option value="The Westin Pune Koregaon Park">The Westin Pune Koregaon Park</option>
+            <option value="Hotel Srimaan">Hotel Srimaan</option>
+            <option value="Resonare Hospitality Services LLP">Resonare Hospitality Services LLP</option>
+            <option value="Park Central">Park Central</option>
+            <option value="OYO 18497 East Field Homes">OYO 18497 East Field Homes</option>
+            <option value="Little Mastiff Chinchwad">Little Mastiff Chinchwad</option>
+            <option value="Eastend Munnar">Eastend Munnar</option>
+            <option value="Wild Elephant Eco-Friendly Resort">Wild Elephant Eco-Friendly Resort</option>
+            <option value="Elysium Gardens Hill Resorts">Elysium Gardens Hill Resorts</option>
+            <option value="Royal Retreat">Royal Retreat</option>
+            <option value="Grand Plaza Munnar">Grand Plaza Munnar</option>
+            <option value="Misty Mountain Resort">Misty Mountain Resort</option>
+            <option value="Spice Jungle Resort">Spice Jungle Resort</option>
+            <option value="Treebo Trend Misty Garden Resorts & Spa">Treebo Trend Misty Garden Resorts & Spa</option>
+            <option value="The Tall Trees Munnar">The Tall Trees Munnar</option>
+            <option value="Treebo Trip Lumino Rainbow">Treebo Trip Lumino Rainbow</option>
+            <option value="Jays Inn">Jays Inn</option>
+            <option value="Munnar Days">Munnar Days</option>
+            <option value="Issacs Residency">Issacs Residency></option>
+            <option value="Lumino Highrange">Lumino Highrange</option>
+            <option value="OYO 23388 Fathima Residency">OYO 23388 Fathima Residency</option>
+            <option value="Nature Zone Jungle Resort">Nature Zone Jungle Resort</option>
+            <option value="Westwood Riverside Garden Resort">Westwood Riverside Garden Resort</option>
+            <option value="The Park New Delhi">The Park New Delhi</option>
+            <option value="The Metropolitan Hotel and Spa New Delhi">The Metropolitan Hotel and Spa New Delhi</option>
+            <option value="Eros Hotel New Delhi, Nehru Place">Eros Hotel New Delhi, Nehru Place</option>
+            <option value="Red Fox Hotel, Delhi Airport">Red Fox Hotel, Delhi Airport</option>
+            <option value="Novotel New Delhi Aerocity Hotel">Novotel New Delhi Aerocity Hotel</option>
+            <option value="OYO 11403 Hotel Daffodils">OYO 11403 Hotel Daffodils</option>
+            <option value="Roseate House">Roseate House</option>
+            <option value="Hotel Godwin Deluxe">Hotel Godwin Deluxe</option>
+            <option value="Taj Palace, New Delhi">Taj Palace, New Delhi</option>
+            <option value="ibis New Delhi Aerocity Hotel">ibis New Delhi Aerocity Hotel</option>
+            <option value="The Claridges New Delhi">The Claridges New Delhi</option>
+            <option value="ADB Rooms Gaurav Guest House">ADB Rooms Gaurav Guest House</option>
+            <option value="Hotel Sohi Residency">Hotel Sohi Residency</option>
+            <option value="D Pavillon Boutique Hotel, Delhi Airport">D Pavillon Boutique Hotel, Delhi Airport</option>
+            <option value="Hotel Blue Stone - Nehru Place">Hotel Blue Stone - Nehru Place</option>
+            <option value="Pride Plaza Hotel Aerocity New Delhi">Pride Plaza Hotel Aerocity New Delhi</option>
+            <option value="WelcomHeritage Haveli Dharampura">WelcomHeritage Haveli Dharampura</option>
+            <option value="Vivanta New Delhi,Dwarka">Vivanta New Delhi,Dwarka</option>
+            <option value="Hotel Krishna Plaza">Hotel Krishna Plaza</option>
+            <option value="Sheraton New Delhi Hotel">Sheraton New Delhi Hotel</option>
+            <option value="Svelte Hotel & Personal Suites">Svelte Hotel & Personal Suites</option>
+            <option value="Pullman New Delhi Aerocity Hotel">Pullman New Delhi Aerocity Hotel</option>
+            <option value="Shervani Hotel Nehru Place">Shervani Hotel Nehru Place</option>
+            <option value="Hotel Sunstar Heritage">Hotel Sunstar Heritage</option>
+            <option value="Radisson Blu Plaza Delhi Airport">Radisson Blu Plaza Delhi Airport</option>
+            <option value="The Ashok">The Ashok</option>
+            <option value="The Orion Plaza">The Orion Plaza</option>
+            <option value="Connaught Royale">Connaught Royale</option>
+            <option value="Hyatt Regency Delhi">Hyatt Regency Delhi</option>
+            <option value="Ambassador, New Delhi-IHCL SeleQtions">Ambassador, New Delhi-IHCL SeleQtions</option>
+            <option value="Hotel ARCH">Hotel ARCH</option>
+            <option value="Shangri-La's - Eros Hotel, New Delhi">Shangri-La's - Eros Hotel, New Delhi</option>
+            <option value="Radisson Blu Hotel New Delhi Dwarka">Radisson Blu Hotel New Delhi Dwarka</option>
+            <option value="Hotel City Star">Hotel City Star</option>
+            <option value="Radisson Blu Hotel New Delhi Paschim Vihar">Radisson Blu Hotel New Delhi Paschim Vihar</option>
+            <option value="Radisson Blu Marina Hotel Connaught Place">Radisson Blu Marina Hotel Connaught Place</option>
+            <option value="WelcomHotel Dwarka - Member ITC Hotel Group">WelcomHotel Dwarka - Member ITC Hotel Group</option>
+            <option value="Treebo Trend AND">Treebo Trend AND</option>
+            <option value="Omehar Stay">Omehar Stay</option>
+            <option value="Hyatt Place Gurgaon Udyog Vihar">Hyatt Place Gurgaon Udyog Vihar</option>
+            <option value="Radisson Blu Kaushambi Delhi NCR">Radisson Blu Kaushambi Delhi NCR</option>
+            <option value="Mandakini Palace">Mandakini Palace</option>
+            <option value="Hotel Sunstar Grand">Hotel Sunstar Grand</option>
+            <option value="River Front Hotel Delhi">River Front Hotel Delhi</option>
+            <option value="The Sun Court Hotel Yatri">The Sun Court Hotel Yatri</option>
+            <option value="Hotel Grand Godwin">Hotel Grand Godwin</option>
+            <option value="ADB Rooms Days Inn">ADB Rooms Days Inn</option>
+            <option value="Rockland Hotel Panchsheel Enclave">Rockland Hotel Panchsheel Enclave</option>
+            <option value="OYO 46221 Hotel Shiv Dev International">OYO 46221 Hotel Shiv Dev International</option>
+            <option value="The Grand New Delhi">The Grand New Delhi</option>
+            <option value="The Oberoi, New Delhi">The Oberoi, New Delhi</option>
+            <option value="Taj City Centre Gurugram">Taj City Centre Gurugram</option>
+            <option value="bloomrooms @ New Delhi Railway Station">bloomrooms @ New Delhi Railway Station</option>
+            <option value="Hari Piorko Inn Express">Hari Piorko Inn Express</option>
+            <option value="Hotel The Raj, New Delhi">Hotel The Raj, New Delhi</option>
+            <option value="The Palms - Town & Country Club">The Palms - Town & Country Club</option>
+            <option value="Hotel Hindustan International">Hotel Hindustan International</option>
+            <option value="The Lodhi - A member of The Leading Hotels Of The World">The Lodhi - A member of The Leading Hotels Of The World</option>
+            <option value="Lemon Tree Premier, Delhi Airport">Lemon Tree Premier, Delhi Airport</option>
+            <option value="Radisson Noida">Radisson Noida</option>
+            <option value="Maplewood Guest House">Maplewood Guest House</option>
+            <option value="Almondz Hotel">Almondz Hotel
+            <option value="Taurus Sarovar Portico">Taurus Sarovar Portico
+            <option value="Hotel Golden Oasis Delhi">Hotel Golden Oasis Delhi
+            <option value="Comfort Home Stay">Comfort Home Stay
+            <option value="The Leela Palace New Delhi">The Leela Palace New Delhi
+            <option value="OYO 19631 Grand Aerocity">OYO 19631 Grand Aerocity
+            <option value="ADB Rooms Sahib Hotel">ADB Rooms Sahib Hotel
+            <option value="The Imperial New Delhi">The Imperial New Delhi
+            <option value="Surya Palace">Surya Palace
+            <option value="Hotel Smart Plaza">
+            <option value="ITC Maurya, a Luxury Collection Hotel, New Delhi">ITC Maurya, a Luxury Collection Hotel, New Delhi
+            <option value="OYO 27596 Hotel Parkash Dx">OYO 27596 Hotel Parkash Dx
+            <option value="Airport Hotel Melfort">Airport Hotel Melfort
+            <option value="Hotel Southern">Hotel Southern
+            <option value="The Ashtan Sarovar Portico">The Ashtan Sarovar Portico
+            <option value="Hotel Sohi Residency">Hotel Sohi Residency 
+           <option value="﻿The Oberoi Grand, Kolkata">﻿The Oberoi Grand, Kolkata</option>
+        ﻿  <option value="            Comfort Inn Kings Crown">            Comfort Inn Kings Crown</option>
+        ﻿  <option value="            The Water View Residency">            The Water View Residency</option>
+            ﻿<option value="            The Elgin Fairlawn Kolkata">            The Elgin Fairlawn Kolkata</option>
+            ﻿<option value="            Hyatt Regency Kolkata">            Hyatt Regency Kolkata</option>
+            ﻿<option value="            Taj Bengal">            Taj Bengal</option>
+            ﻿<option value="            LYNQ AERO">            LYNQ AERO</option>
+            ﻿<option value="            Hotel Royale">            Hotel Royale</option>
+            ﻿<option value="            OYO 38844 Hotel Orchid Plaza">            OYO 38844 Hotel Orchid Plaza</option>
+            ﻿<option value="            Hotel Gardenia">            Hotel Gardenia</option>
+            ﻿<option value="            Siamton Inn">            Siamton Inn</option>
+            ﻿<option value="            The Park Kolkata">            The Park Kolkata</option>
+            ﻿<option value="            Hotel Heera">            Hotel Heera</option>
+            ﻿<option value="            Vedic Village Spa Resort">            Vedic Village Spa Resort</option>
+            ﻿<option value="            Hotel Gulshan International">            Hotel Gulshan International</option>
+            ﻿<option value="            SPOT ON 49450 Silver Woods">            SPOT ON 49450 Silver Woods</option>
+            ﻿<option value="            The Residency">            The Residency</option>
+            ﻿<option value="            Tatvam Residency">            Tatvam Residency</option>
+            ﻿<option value="            OYO 49454 Alankar Guesthouse">            OYO 49454 Alankar Guesthouse</option>
+            ﻿<option value="            The Floatel Hotel">            The Floatel Hotel</option>
+            ﻿<option value="            OYO 71148 Meera Guest House">            OYO 71148 Meera Guest House</option>
+            ﻿<option value="            Hotel Coco Inn">            Hotel Coco Inn</option>
+            ﻿<option value="            OYO 16209 Hotel Ambar Palace">            OYO 16209 Hotel Ambar Palace</option>
+            ﻿<option value="            Hotel Best Inn">            Hotel Best Inn</option>
+            ﻿<option value="            Hotel Crest Inn">            Hotel Crest Inn</option>
+            ﻿<option value="            OYO 63219 Amtala Guest House">            OYO 63219 Amtala Guest House</option>
+            ﻿<option value="            Shila International">            Shila International</option>
+            ﻿<option value="            Hotel Park Victoria">            Hotel Park Victoria</option>
+            ﻿<option value="            OYO 37683 Second Home">            OYO 37683 Second Home</option>
+            ﻿<option value="            Visitel -A Boutique Hotel.">            Visitel -A Boutique Hotel.</option>
+            ﻿<option value="            OYO Townhouse 120 The Axis">            OYO Townhouse 120 The Axis</option>
+            ﻿<option value="            OYO 16310 Balaji Inn Ballygunge">            OYO 16310 Balaji Inn Ballygunge</option>
+            ﻿<option value="            The Quest Inn">            The Quest Inn</option>
+            ﻿<option value="            Hotel Rushabh Home">            Hotel Rushabh Home</option>
+            ﻿<option value="            Capital O 1481 Hotel Heritage">            Capital O 1481 Hotel Heritage</option>
+            ﻿<option value="            Barsana Boutique Hotel">            Barsana Boutique Hotel</option>
+            ﻿<option value="            FabHotel NS International">            FabHotel NS International</option>
+            ﻿<option value="            OYO Rooms 044 Salt Lake Sector 3">            OYO Rooms 044 Salt Lake Sector 3</option>
+            ﻿<option value="            OYO 16058 Classic Inn">            OYO 16058 Classic Inn</option>
+            ﻿<option value="            Marble Palace Guest House">            Marble Palace Guest House</option>
+            ﻿<option value="            OYO 28600 Supal">            OYO 28600 Supal</option>
+            ﻿<option value="            Hotel VIP International">            Hotel VIP International</option>
+            ﻿<option value="            OYO 13600 Newcastle Inn">            OYO 13600 Newcastle Inn</option>
+            ﻿<option value="            Celesta Kolkata">            Celesta Kolkata</option>
+            ﻿<option value="            Marrina Hotel">            Marrina Hotel</option>
+            ﻿<option value="            Nu Blue Moon Guest House">            Nu Blue Moon Guest House</option>
+            ﻿<option value="            Kenilworth Hotel, Kolkata">            Kenilworth Hotel, Kolkata</option>
+            ﻿<option value="            Hotel Royal Garden">            Hotel Royal Garden</option>
+            ﻿<option value="            Treebo Trend Globe International">            Treebo Trend Globe International</option>
+            ﻿<option value="            The Sonnet">            The Sonnet</option>
+            ﻿<option value="            ibis Kolkata Rajarhat Hotel">            ibis Kolkata Rajarhat Hotel</option>
+            ﻿<option value="            LYNQ-CICO">            LYNQ-CICO</option>
+            ﻿<option value="            Hotel O2 Oxygen">            Hotel O2 Oxygen</option>
+            ﻿<option value="            Hotel Esteem">            Hotel Esteem</option>
+            ﻿<option value="            The HHI Kolkata">            The HHI Kolkata</option>
+            ﻿<option value="            OYO 2838 Shree Guest House">            OYO 2838 Shree Guest House</option>
+            ﻿<option value="            Hotel O2 VIP">            Hotel O2 VIP</option>
+            ﻿<option value="            Howard Johnson by Wyndham Kolkata">            Howard Johnson by Wyndham Kolkata</option>
+            ﻿<option value="            OYO 14524 Platinum Solitaire">            OYO 14524 Platinum Solitaire</option>
+            ﻿<option value="            Hotel Sawood International">            Hotel Sawood International</option>
+            ﻿<option value="            OYO 35873 Durbar Guest House">            OYO 35873 Durbar Guest House</option>
+            ﻿<option value="            Hotel Diamond Suites">            Hotel Diamond Suites</option>
+            ﻿<option value="            OYO 10014 Bishnupur">            OYO 10014 Bishnupur</option>
+            ﻿<option value="            Hotel Royal Palace">            Hotel Royal Palace</option>
+            ﻿<option value="            Hotel Amit">            Hotel Amit</option>
+            ﻿<option value="            OYO 19767 Hotel Naman">            OYO 19767 Hotel Naman</option>
+            ﻿<option value="            Hotel Shobla Royale">            Hotel Shobla Royale</option>
+            ﻿<option value="            Apple Valley Resort">            Apple Valley Resort</option>
+            ﻿<option value="            Pine Wood Inn Tosh">            Pine Wood Inn Tosh</option>
+            ﻿<option value="            The Rainbow Inn & Cafe">            The Rainbow Inn & Cafe</option>
+            ﻿<option value="            Hotel The Nest">            Hotel The Nest</option>
+            ﻿<option value="            Regenta Inn Blossoms Kullu Manali">            Regenta Inn Blossoms Kullu Manali</option>
+            ﻿<option value="            Himalayan Kothi Kais">            Himalayan Kothi Kais</option>
+            ﻿<option value="            Hotel Sun and Wind">            Hotel Sun and Wind</option>
+            ﻿<option value="            Asaka Himalayan Inspiration lodge Kasol">            Asaka Himalayan Inspiration lodge Kasol</option>
+            ﻿<option value="            Hotel Sarla Regency">            Hotel Sarla Regency</option>
+            ﻿<option value="            Baragarh Resort and Spa, Centrally Heated Mountain Side Resort, Manali">            Baragarh Resort and Spa, Centrally Heated Mountain Side Resort, Manali</option>
+            ﻿<option value="            OYO 7341 Hotel Himalayan Hamlet">            OYO 7341 Hotel Himalayan Hamlet</option>
+            ﻿<option value="            goStops Naggar">            goStops Naggar</option>
+            ﻿<option value="            Rajputana Diaries">            Rajputana Diaries</option>
+            ﻿<option value="            Jaipur Marriott Hotel">            Jaipur Marriott Hotel</option>
+            ﻿<option value="            Doubletree by Hilton Jaipur Amer">            Doubletree by Hilton Jaipur Amer</option>
+            ﻿<option value="            Hotel New Rockwell">            Hotel New Rockwell</option>
+            ﻿<option value="            Radisson Blu Jaipur">            Radisson Blu Jaipur</option>
+            ﻿<option value="            Jasoda Heritage by Keshav Global Hotels">            Jasoda Heritage by Keshav Global Hotels</option>
+            ﻿<option value="            Hotel Triveni Residency">            Hotel Triveni Residency</option>
+            ﻿<option value="            Hotel Avana">            Hotel Avana</option>
+            ﻿<option value="            RUDRA VILAS - A Royal Heritage Hotel">            RUDRA VILAS - A Royal Heritage Hotel</option>
+            ﻿<option value="            The Fern - An Ecotel Hotel Jaipur">            The Fern - An Ecotel Hotel Jaipur</option>
+            ﻿<option value="            Jaipur Hotel New">            Jaipur Hotel New</option>
+            ﻿<option value="            Devi Ratn, Jaipur -IHCL SeleQtions">            Devi Ratn, Jaipur -IHCL SeleQtions</option>
+            ﻿<option value="            Golden Eagle Hotels & Resorts">            Golden Eagle Hotels & Resorts</option>
+            ﻿<option value="            Hotel Ashapurna">            Hotel Ashapurna</option>
+            ﻿<option value="            5 BY OYO METROPOLITAN">            5 BY OYO METROPOLITAN</option>
+            ﻿<option value="            Hotel Gulmor Garden">            Hotel Gulmor Garden</option>
+            ﻿<option value="            Royal Orchid Central Jaipur">            Royal Orchid Central Jaipur</option>
+            ﻿<option value="            Hotel Platinum Key">            Hotel Platinum Key</option>
+            ﻿<option value="            Hotel Mansingh">            Hotel Mansingh</option>
+            ﻿<option value="            Zone by The Park Bani Park Jaipur">            Zone by The Park Bani Park Jaipur</option>
+            ﻿<option value="            Hotel Diggi Palace">            Hotel Diggi Palace</option>
+            ﻿<option value="            Broadway Inn">            Broadway Inn</option>
+            ﻿<option value="            Jaipur Inn">            Jaipur Inn</option>
+            ﻿<option value="            Suryaa Villa - A City Centre Hotel">            Suryaa Villa - A City Centre Hotel</option>
+            ﻿<option value="            Umaid Mahal - A Heritage Style Boutique Hotel">            Umaid Mahal - A Heritage Style Boutique Hotel</option>
+            ﻿<option value="            Hotel Aurum">            Hotel Aurum</option>
+            ﻿<option value="            Raya Inn">            Raya Inn</option>
+            ﻿<option value="            County Inn Hotel">            County Inn Hotel</option>
+            ﻿<option value="            Click Hotel Jaipur">            Click Hotel Jaipur</option>
+            ﻿<option value="            Sarovar Portico Jaipur">            Sarovar Portico Jaipur</option>
+            ﻿<option value="            Hotel Sagun">            Hotel Sagun</option>
+            ﻿<option value="            Hotel Dynasty by KeyMagics">            Hotel Dynasty by KeyMagics</option>
+            ﻿<option value="            Jagrati Ananta Express">            Jagrati Ananta Express</option>
+            ﻿<option value="            Lemon Tree Premier, Jaipur">            Lemon Tree Premier, Jaipur</option>
+            ﻿<option value="            The Fern Residency Jaipur">            The Fern Residency Jaipur</option>
+            ﻿<option value="            Hotel Lily Bay Prime">            Hotel Lily Bay Prime</option>
+            ﻿<option value="            SPOT ON 62734 Hotel Sarfaraz Palace">            SPOT ON 62734 Hotel Sarfaraz Palace</option>
+            ﻿<option value="            The Gold Palace & Resorts">            The Gold Palace & Resorts</option>
+            ﻿<option value="            Hotel Green Valley">            Hotel Green Valley</option>
+            ﻿<option value="            The Wallstreet A Busines Hotel">            The Wallstreet A Busines Hotel</option>
+            ﻿<option value="            Treebo Trend Bliss Raja Park">            Treebo Trend Bliss Raja Park</option>
+            ﻿<option value="            Hotel Moon Light Palace Jaipur">            Hotel Moon Light Palace Jaipur</option>
+            ﻿<option value="            Mahal Khandela">            Mahal Khandela</option>
+            ﻿<option value="            Rajputana Haveli">            Rajputana Haveli</option>
+            ﻿<option value="            FabHotel Aqua">            FabHotel Aqua</option>
+            ﻿<option value="            Trimrooms Mount Blue">            Trimrooms Mount Blue</option>
+            ﻿<option value="            Clarion Hotel Bella Casa">            Clarion Hotel Bella Casa</option>
+            ﻿<option value="            Hilton Jaipur">            Hilton Jaipur</option>
+            ﻿<option value="            Olive Service Apartments Jaipur">            Olive Service Apartments Jaipur</option>
+            ﻿<option value="            Rawla Mrignayani Palace">            Rawla Mrignayani Palace</option>
+            ﻿<option value="            Hotel Airport View">            Hotel Airport View</option>
+            ﻿<option value="            Hotel Sun City Plaza">            Hotel Sun City Plaza</option>
+            ﻿<option value="            The Amer Valley">            The Amer Valley</option>
+            ﻿<option value="            Hotel Sajjan Niwas">            Hotel Sajjan Niwas</option>
+            ﻿<option value="            Hotel Sumaditya">            Hotel Sumaditya</option>
+            ﻿<option value="            Skyzone Greens Resort">            Skyzone Greens Resort</option>
+            ﻿<option value="            Hotel Nilax">            Hotel Nilax</option>
+            ﻿<option value="            Hotel Krishna by KeyMagics">            Hotel Krishna by KeyMagics</option>
+            ﻿<option value="            TGI Apple Inn">            TGI Apple Inn</option>
+            ﻿<option value="            Crimson Park - The Heritage">            Crimson Park - The Heritage</option>
+            ﻿<option value="            Indana Palace Jaipur">            Indana Palace Jaipur</option>
+            ﻿<option value="            Hotel RR 62">            Hotel RR 62</option>
+            ﻿<option value="            Treebo Trend Hotel Sandhya Shree">            Treebo Trend Hotel Sandhya Shree</option>
+            ﻿<option value="            Ginger Jaipur">            Ginger Jaipur</option>
+            ﻿<option value="            Royal Heritage Haveli">            Royal Heritage Haveli</option>
+            ﻿<option value="            Souvenir Peppermint">            Souvenir Peppermint</option>
+            ﻿<option value="            Amer City Heritage Hotel">            Amer City Heritage Hotel</option>
+            ﻿<option value="            Shahpura House">            Shahpura House</option>
+            ﻿<option value="            Hotel Sarvmangla Garden">            Hotel Sarvmangla Garden</option>
+            ﻿<option value="            Hotel Jaipur Heritage">            Hotel Jaipur Heritage</option>
+            ﻿<option value="            KK Royal Hotel & Convention Centre">            KK Royal Hotel & Convention Centre</option>
+            ﻿<option value="            Hotel De Nada">            Hotel De Nada</option>
+            ﻿<option value="            Nahar Singh Haveli">            Nahar Singh Haveli</option>
+            ﻿<option value="            Treebo Trend Natraj Jaipur">            Treebo Trend Natraj Jaipur</option>
+            ﻿<option value="            Hotel Satkar">            Hotel Satkar</option>
+            ﻿<option value="            Hotel M Villa">            Hotel M Villa</option>
+            ﻿<option value="            Vesta International">            Vesta International</option>
+            ﻿<option value="            Cambay Grand">            Cambay Grand</option>
+            ﻿<option value="            66 Residency - A Boutique Hotel">            66 Residency - A Boutique Hotel</option>
+            ﻿<option value="            Hotel New Frontier">            Hotel New Frontier</option>
+            ﻿<option value="            Sky Rich International">            Sky Rich International</option>
+            ﻿<option value="            Hotel Shivam International">            Hotel Shivam International</option>
+            ﻿<option value="            Hotel Gauranga Inn">            Hotel Gauranga Inn</option>
+            ﻿<option value="            Hotel Shipra International">            Hotel Shipra International</option>
+            ﻿<option value="            Airport Hotel Tashree">            Airport Hotel Tashree</option>
+            ﻿<option value="            Hotel Apra Inn">            Hotel Apra Inn</option>
+            ﻿<option value="            Hotel Shivam Residency">            Hotel Shivam Residency</option>
+            ﻿<option value="            Hotel Sunshine">            Hotel Sunshine</option>
+            ﻿<option value="            Mavens House">            Mavens House</option>
+            ﻿<option value="            Hotel Yuvraj Deluxe New Delhi Railway station">            Hotel Yuvraj Deluxe New Delhi Railway station</option>
+            ﻿<option value="            Hotel Tashkent Palace">            Hotel Tashkent Palace</option>
+            ﻿<option value="            OYO 4856 Hotel The Benz">            OYO 4856 Hotel The Benz</option>
+            ﻿<option value="            Welcomhotel Bella Vista Chandigarh Panchkula ‚Äì Member ITC Hotel Group">            Welcomhotel Bella Vista Chandigarh Panchkula ‚Äì Member ITC Hotel Group</option>
+            ﻿<option value="            Hotel KLG Starlite">            Hotel KLG Starlite</option>
+            ﻿<option value="            ANA Clarks INN Panchkula">            ANA Clarks INN Panchkula</option>
+            ﻿<option value="            The Altius A Boutique Hotel">            The Altius A Boutique Hotel</option>
+            ﻿<option value="            OYO 28575 Hotel J&B">            OYO 28575 Hotel J&B</option>
+            ﻿<option value="            Hotel Midway">            Hotel Midway</option>
+            ﻿<option value="            4 By Oyo Zirakpur">            4 By Oyo Zirakpur</option>
+            ﻿<option value="            Hyatt Regency Chandigarh">            Hyatt Regency Chandigarh</option>
+            ﻿<option value="            Hotel Almeida">            Hotel Almeida</option>
+            ﻿<option value="            Hotel SKA Hometel">            Hotel SKA Hometel</option>
+            ﻿<option value="            Ramada Plaza by Wyndham Chandigarh Zirakpur">            Ramada Plaza by Wyndham Chandigarh Zirakpur</option>
+            ﻿<option value="            Lemon Tree Hotel, Chandigarh">            Lemon Tree Hotel, Chandigarh</option>
+            ﻿<option value="            Hotel Wisteria">            Hotel Wisteria</option>
+            ﻿<option value="            Holiday Inn Chandigarh Zirakpur">            Holiday Inn Chandigarh Zirakpur</option>
+            ﻿<option value="            OYO 37663 Hotel Royal Palace">            OYO 37663 Hotel Royal Palace</option>
+            ﻿<option value="            Capital O 10990 Hotel Alaska">            Capital O 10990 Hotel Alaska</option>
+            ﻿<option value="            OYO 39957 Royal Classic">            OYO 39957 Royal Classic</option>
+            ﻿<option value="            Hotel Cama">            Hotel Cama</option>
+            ﻿<option value="            Hotel South End chandigarh">            Hotel South End chandigarh</option>
+            ﻿<option value="            OYO 41743 Hotel Silver">            OYO 41743 Hotel Silver</option>
+            ﻿<option value="            Radisson Chandigarh Zirakpur">            Radisson Chandigarh Zirakpur</option>
+            ﻿<option value="            Hotel Mountview">            Hotel Mountview</option>
+            ﻿<option value="            OYO 6933 Satyam Home Stay">            OYO 6933 Satyam Home Stay</option>
+            ﻿<option value="            OYO 9420 Hotel Silver Palm">            OYO 9420 Hotel Silver Palm</option>
+            ﻿<option value="            OYO 24423 Hotel Royal">            OYO 24423 Hotel Royal</option>
+            ﻿<option value="            OYO 42743 Hotel Midway">            OYO 42743 Hotel Midway</option>
+            ﻿<option value="            OYO 26606 Hotel R K Grand">            OYO 26606 Hotel R K Grand</option>
+            ﻿<option value="            OYO 10832 Hotel JB 2">            OYO 10832 Hotel JB 2</option>
+            ﻿<option value="            Hotel Surya Palace">            Hotel Surya Palace</option>
+            ﻿<option value="            The Fern Residency Chandigarh">            The Fern Residency Chandigarh</option>
+            ﻿<option value="            S.R Residency">            S.R Residency</option>
+            ﻿<option value="            OYO 38009 The Sai Villa">            OYO 38009 The Sai Villa</option>
+            ﻿<option value="            Hotel Sapphire">            Hotel Sapphire</option>
+            ﻿<option value="            Hotel Royal Park 22">            Hotel Royal Park 22</option>
+            ﻿<option value="            OYO 1255 Hotel City Plaza 17">            OYO 1255 Hotel City Plaza 17</option>
+            ﻿<option value="            OYO 6298 Motel Divine">            OYO 6298 Motel Divine</option>
+            ﻿<option value="            Treebo Shashank Villa">            Treebo Shashank Villa</option>
+            ﻿<option value="            OYO 9661 Hotel Victoria Palace">            OYO 9661 Hotel Victoria Palace</option>
+            ﻿<option value="            Hotel Vikrant">            Hotel Vikrant</option>
+            ﻿<option value="            OYO 14225 Bahl Regency">            OYO 14225 Bahl Regency</option>
+            ﻿<option value="            OYO 4894 Hotel The Diamond Chandigarh">            OYO 4894 Hotel The Diamond Chandigarh</option>
+            ﻿<option value="            OYO 10386 Hotel Jimmy">            OYO 10386 Hotel Jimmy</option>
+            ﻿<option value="            OYO 10330 Hotel Golden Brooks">            OYO 10330 Hotel Golden Brooks</option>
+            ﻿<option value="            Hotel Palmdale">            Hotel Palmdale</option>
+            ﻿<option value="            OYO 17081 Hotel Signia">            OYO 17081 Hotel Signia</option>
+            ﻿<option value="            OYO 17199 Hotel Clg Grand">            OYO 17199 Hotel Clg Grand</option>
+            ﻿<option value="            OYO 9732 Nayagaon">            OYO 9732 Nayagaon</option>
+            ﻿<option value="            OYO 12379 Hotel Riyasat">            OYO 12379 Hotel Riyasat</option>
+            ﻿<option value="            Hometel Chandigarh">            Hometel Chandigarh</option>
+            ﻿<option value="            Hotel Grand Plaza">            Hotel Grand Plaza</option>
+            ﻿<option value="            OYO 4727 Hotel Sangam Pacific">            OYO 4727 Hotel Sangam Pacific</option>
+            ﻿<option value="            OYO 9599 Vansh Palace">            OYO 9599 Vansh Palace</option>
+            ﻿<option value="            OYO 61261 Hotel Z">            OYO 61261 Hotel Z</option>
+            ﻿<option value="            OYO 4849 Hotel Staywell">            OYO 4849 Hotel Staywell</option>
+            ﻿<option value="            OYO 15523 Hotel JD Inn">            OYO 15523 Hotel JD Inn</option>
+            ﻿<option value="            OYO 1496 Hotel Stayly">            OYO 1496 Hotel Stayly</option>
+            ﻿<option value="            Hotel Mandarin Square">            Hotel Mandarin Square</option>
+            ﻿<option value="            JK Rooms 142 Silky Resorts">            JK Rooms 142 Silky Resorts</option>
+            ﻿<option value="            Capital O 30699 Lrc Hotel And Banquet">            Capital O 30699 Lrc Hotel And Banquet</option>
+            ﻿<option value="            OYO 18504 Hotel Safari">            OYO 18504 Hotel Safari</option>
+            ﻿<option value="            Hotel Golden Inn">            Hotel Golden Inn</option>
+            ﻿<option value="            Hotel Turquoise">            Hotel Turquoise</option>
+            ﻿<option value="            OYO 16949 Hotel Indiano">            OYO 16949 Hotel Indiano</option>
+            ﻿<option value="            SPOT ON 61033 Hotel Diamond">            SPOT ON 61033 Hotel Diamond</option>
+            ﻿<option value="            OYO 8664 Hotel 1st Choice">            OYO 8664 Hotel 1st Choice</option>
+            ﻿<option value="            Capital O 18835 Arista Hotel">            Capital O 18835 Arista Hotel</option>
+            ﻿<option value="            OYO 46866 The Nest 2">            OYO 46866 The Nest 2</option>
+            ﻿<option value="            JW Marriott Hotel Chandigarh">            JW Marriott Hotel Chandigarh</option>
+            ﻿<option value="            Holiday Inn Chandigarh Panchkula">            Holiday Inn Chandigarh Panchkula</option>
+            ﻿<option value="            OYO 40846 Jm Plaza">            OYO 40846 Jm Plaza</option>
+            ﻿<option value="            The Fort Ramgarh">            The Fort Ramgarh</option>
+            ﻿<option value="            OYO 9638 Hotel Sun Valley">            OYO 9638 Hotel Sun Valley</option>
+            ﻿<option value="            OYO 33475 Hotel Orient View">            OYO 33475 Hotel Orient View</option>
+            ﻿<option value="            Treebo Trend JD Residency">            Treebo Trend JD Residency</option>
+            ﻿<option value="            OYO 46328 Hotel Anand Shri">            OYO 46328 Hotel Anand Shri</option>
+            ﻿<option value="            Hotel Rajshree">            Hotel Rajshree</option>
+            ﻿<option value="            WelcomHeritage Ramgarh">            WelcomHeritage Ramgarh</option>
+            ﻿<option value="            Glades Hotel">            Glades Hotel</option>
+            ﻿<option value="            Hotel City Heart Premium">            Hotel City Heart Premium</option>
+            ﻿<option value="            Mint Hotel Premia">            Mint Hotel Premia</option>
+            ﻿<option value="            Hotel Stay Casa">            Hotel Stay Casa</option>
+            ﻿<option value="            Hotel Tilak">            Hotel Tilak</option>
+            ﻿<option value="            Citrus Prime Bhopal by OTHPL">            Citrus Prime Bhopal by OTHPL</option>
+            ﻿<option value="            Hotel Jalsa">            Hotel Jalsa</option>
+            ﻿<option value="            Jehan Numa Palace Hotel">            Jehan Numa Palace Hotel</option>
+            ﻿<option value="            Hotel Rajhans Abhinandan">            Hotel Rajhans Abhinandan</option>
+            ﻿<option value="            Hotel Pathik">            Hotel Pathik</option>
+            ﻿<option value="            Hotel Aditya Residency">            Hotel Aditya Residency</option>
+            ﻿<option value="            Stay Inn">            Stay Inn</option>
+            ﻿<option value="            Hotel Amer Greens">            Hotel Amer Greens</option>
+            ﻿<option value="            TGI Insignia">            TGI Insignia</option>
+            ﻿<option value="            Hotel Smart Room By Shree Vatika">            Hotel Smart Room By Shree Vatika</option>
+            ﻿<option value="            Hotel Vigya Shree">            Hotel Vigya Shree</option>
+            ﻿<option value="            Hotel Sudarshan Palace">            Hotel Sudarshan Palace</option>
+            ﻿<option value="            Sudarshan City Walk">            Sudarshan City Walk</option>
+            ﻿<option value="            Hotel Shubh Inn">            Hotel Shubh Inn</option>
+            ﻿<option value="            Noor-Us-Sabah Palace">            Noor-Us-Sabah Palace</option>
+            ﻿<option value="            Hotel Orchid Inn">            Hotel Orchid Inn</option>
+            ﻿<option value="            Hotel Brij Palace">            Hotel Brij Palace</option>
+            ﻿<option value="            Park Hotel">            Park Hotel</option>
+            ﻿<option value="            Hotel Abhinav Royal">            Hotel Abhinav Royal</option>
+            ﻿<option value="            OYO 28691 Hotel Golden Star">            OYO 28691 Hotel Golden Star</option>
+            ﻿<option value="            Hotel Shree Vatika">            Hotel Shree Vatika</option>
+            ﻿<option value="            Hotel Vasundhara">            Hotel Vasundhara</option>
+            ﻿<option value="            OYO 28247 Hotel SMR Palace">            OYO 28247 Hotel SMR Palace</option>
+            ﻿<option value="            Hotel Shree Vinayak Palace">            Hotel Shree Vinayak Palace</option>
+            ﻿<option value="            OYO 24646 Hotel Gaurav Palace">            OYO 24646 Hotel Gaurav Palace</option>
+            ﻿<option value="            Hotel K C Palace">            Hotel K C Palace</option>
+            ﻿<option value="            Hotel Alankar Palace">            Hotel Alankar Palace</option>
+            ﻿<option value="            Hotel Midland">            Hotel Midland</option>
+            ﻿<option value="            OYO 8650 Hotel Johri Residency">            OYO 8650 Hotel Johri Residency</option>
+            ﻿<option value="            Hotel GK Palace">            Hotel GK Palace</option>
+            ﻿<option value="            OYO 14637 Hotel Taste of India">            OYO 14637 Hotel Taste of India</option>
+            ﻿<option value="            OYO 24172 Hotel Jp Heights">            OYO 24172 Hotel Jp Heights</option>
+            ﻿<option value="            Capital O 29355 Hotel Oasis Blue">            Capital O 29355 Hotel Oasis Blue</option>
+            ﻿<option value="            OYO 23058 Hotel Aditya Regency">            OYO 23058 Hotel Aditya Regency</option>
+            ﻿<option value="            Hotel Jaishree Palace">            Hotel Jaishree Palace</option>
+            ﻿<option value="            Lals Plaza Hotel">            Lals Plaza Hotel</option>
+            ﻿<option value="            Hotel Rajhans Regent">            Hotel Rajhans Regent</option>
+            ﻿<option value="            Gaurav Hotel">            Gaurav Hotel</option>
+            ﻿<option value="            Hotel Dayal Shree Paradise">            Hotel Dayal Shree Paradise</option>
+            ﻿<option value="            Courtyard by Marriott Bhopal">            Courtyard by Marriott Bhopal</option>
+            ﻿<option value="            Hotel Arch Manor Deluxe">            Hotel Arch Manor Deluxe</option>
+            ﻿<option value="            Hotel Ganpati">            Hotel Ganpati</option>
+            ﻿<option value="            HOTEL LAKE PRINCESS">            HOTEL LAKE PRINCESS</option>
+            ﻿<option value="            Hotel K International">            Hotel K International</option>
+            ﻿<option value="            SPOT ON 33423 Tunez">            SPOT ON 33423 Tunez</option>
+            ﻿<option value="            Hotel Shagun Palace">            Hotel Shagun Palace</option>
+            ﻿<option value="            OYO 1547 Hotel The Oasis">            OYO 1547 Hotel The Oasis</option>
+            ﻿<option value="            OYO 8183 Hotel Sandal Wood">            OYO 8183 Hotel Sandal Wood</option>
+            ﻿<option value="            Hotel Shagun">            Hotel Shagun</option>
+            ﻿<option value="            OYO 11307 Hotel Satya Villas">            OYO 11307 Hotel Satya Villas</option>
+            ﻿<option value="            Hotel Signetic Blue">            Hotel Signetic Blue</option>
+            ﻿<option value="            OYO 5839 Hotel Mohit Regency">            OYO 5839 Hotel Mohit Regency</option>
+            ﻿<option value="            Hotel Shiv Villas">            Hotel Shiv Villas</option>
+            ﻿<option value="            The Lake Borbon">            The Lake Borbon</option>
+            ﻿<option value="            Hotel Ganga Regency">            Hotel Ganga Regency</option>
+            ﻿<option value="            Hotel Avantika By MMR">            Hotel Avantika By MMR</option>
+            ﻿<option value="            OYO 28267 Convivial Paradise">            OYO 28267 Convivial Paradise</option>
+            ﻿<option value="            OYO 15259 Smart City">            OYO 15259 Smart City</option>
+            ﻿<option value="            Hotel Sangat Regency">            Hotel Sangat Regency</option>
+            ﻿<option value="            OYO 14593 Smart Rooms by Shree Vatika">            OYO 14593 Smart Rooms by Shree Vatika</option>
+            ﻿<option value="            OYO 3340 Hotel Ashirwad Regency">            OYO 3340 Hotel Ashirwad Regency</option>
+            ﻿<option value="            OYO 24707 Comfort Inn">            OYO 24707 Comfort Inn</option>
+            ﻿<option value="            Hotel Western">            Hotel Western</option>
+            ﻿<option value="            Grand Ashirwad Beacon">            Grand Ashirwad Beacon</option>
+            ﻿<option value="            OYO 65280 New Raghava Guest House">            OYO 65280 New Raghava Guest House</option>
+            ﻿<option value="            Cannychoice Inn">            Cannychoice Inn</option>
+            ﻿<option value="            Hotel Lotus Grand">            Hotel Lotus Grand</option>
+            ﻿<option value="            Restel Studio Flats">            Restel Studio Flats</option>
+            ﻿<option value="            Prestige service apartment">            Prestige service apartment</option>
+            ﻿<option value="            The Manohar Hyderabad">            The Manohar Hyderabad</option>
+            ﻿<option value="            Holiday Inn Express Hyderabad Banjara Hills">            Holiday Inn Express Hyderabad Banjara Hills</option>
+            ﻿<option value="            Hotel Minerva Grand">            Hotel Minerva Grand</option>
+            ﻿<option value="            Sheraton Hyderabad Hotel">            Sheraton Hyderabad Hotel</option>
+            ﻿<option value="            Radisson Hyderabad Hitec City">            Radisson Hyderabad Hitec City</option>
+            ﻿<option value="            OYO 49253 Raja Residency">            OYO 49253 Raja Residency</option>
+            ﻿<option value="            Minerva Grand Kondapur">            Minerva Grand Kondapur</option>
+            ﻿<option value="            Fairfield by Marriott Hyderabad Gachibowli">            Fairfield by Marriott Hyderabad Gachibowli</option>
+            ﻿<option value="            Oakwood Residence Kapil Hyderabad">            Oakwood Residence Kapil Hyderabad</option>
+            ﻿<option value="            CITADEL Hotel By Vinnca">            CITADEL Hotel By Vinnca</option>
+            ﻿<option value="            Hotel Green Park">            Hotel Green Park</option>
+            ﻿<option value="            i- Stay Hotels -Hitec">            i- Stay Hotels -Hitec</option>
+            ﻿<option value="            The Central Park">            The Central Park</option>
+            ﻿<option value="            Guest inn Suites">            Guest inn Suites</option>
+            ﻿<option value="            OYO 30151 Golden Hive">            OYO 30151 Golden Hive</option>
+            ﻿<option value="            Hotel Geetanjali">            Hotel Geetanjali</option>
+            ﻿<option value="            Hill View Munnar">            Hill View Munnar</option>
+            ﻿<option value="            Tea Valley Resort">            Tea Valley Resort</option>
+            ﻿<option value="            Parakkat Nature Resorts">            Parakkat Nature Resorts</option>
+            ﻿<option value="            Casa Montana">            Casa Montana</option>
+            ﻿<option value="            Hotel Royal Inn Mahalaxmi">            Hotel Royal Inn Mahalaxmi</option>
+            ﻿<option value="            JW Marriott Mumbai Juhu">            JW Marriott Mumbai Juhu</option>
+            ﻿<option value="            Kohinoor Continental">            Kohinoor Continental</option>
+            ﻿<option value="            Hotel Crystal Luxury INN">            Hotel Crystal Luxury INN</option>
+            ﻿<option value="            Hotel Regal Enclave">            Hotel Regal Enclave</option>
+            ﻿<option value="            Golden Chariot The Boutique Hotel">            Golden Chariot The Boutique Hotel</option>
+            ﻿<option value="            KF Residency">            KF Residency</option>
+            ﻿<option value="            Hotel Regal Palace">            Hotel Regal Palace</option>
+            ﻿<option value="            Hotel Park View Mumbai">            Hotel Park View Mumbai</option>
+            ﻿<option value="            Hotel Orient Regency">            Hotel Orient Regency</option>
+            ﻿<option value="            Ocean Suites Hotel">            Ocean Suites Hotel</option>
+            ﻿<option value="            Sahara Star">            Sahara Star</option>
+            ﻿<option value="            Hotel Leafio Mumbai">            Hotel Leafio Mumbai</option>
+            ﻿<option value="            Hotel Hometown Near Sion">            Hotel Hometown Near Sion</option>
+            ﻿<option value="            Hotel Crystal Crown">            Hotel Crystal Crown</option>
+            ﻿<option value="            Lucky Hotel Bandra">            Lucky Hotel Bandra</option>
+            ﻿<option value="            Hotel Dadar Residency-Near Tata Hospital">            Hotel Dadar Residency-Near Tata Hospital</option>
+            ﻿<option value="            Bentley Hotel Churchgate">            Bentley Hotel Churchgate</option>
+            ﻿<option value="            Hotel Universal Garden">            Hotel Universal Garden</option>
+            ﻿<option value="            Hotel Broadway">            Hotel Broadway</option>
+            ﻿<option value="            Sharda residency">            Sharda residency</option>
+            ﻿<option value="            Hotel New Shree Niwas">            Hotel New Shree Niwas</option>
+            ﻿<option value="            Fairfield by Marriott Pune Kharadi">            Fairfield by Marriott Pune Kharadi</option>
+            ﻿<option value="            Four Points by Sheraton Hotel & Serviced Apartments, Pune">            Four Points by Sheraton Hotel & Serviced Apartments, Pune</option>
+            ﻿<option value="            Holiday Inn Express Pune Pimpri">            Holiday Inn Express Pune Pimpri</option>
+            ﻿<option value="            Holiday Inn Express Pune Hinjewadi">            Holiday Inn Express Pune Hinjewadi</option>
+            ﻿<option value="            JW Marriott Hotel Pune">            JW Marriott Hotel Pune</option>
+            ﻿<option value="            Capital O 38128 Omkar Executive">            Capital O 38128 Omkar Executive</option>
+            ﻿<option value="            7 Apple Hotel - Viman Nagar Pune">            7 Apple Hotel - Viman Nagar Pune</option>
+            ﻿<option value="            Mint Lxia">            Mint Lxia</option>
+            ﻿<option value="            FabHotel Kundan Palace">            FabHotel Kundan Palace</option>
+            ﻿<option value="            Treebo Trip Hill View Ex">            Treebo Trip Hill View Ex</option>
+            ﻿<option value="            St Laurn Koregaon Park Pune">            St Laurn Koregaon Park Pune</option>
+            ﻿<option value="            Sayaji Pune">            Sayaji Pune</option>
+            ﻿<option value="            The Orritel Hotel, Hinjewadi">            The Orritel Hotel, Hinjewadi</option>
+            ﻿<option value="            Lemon Tree Premier City Center Pune">            Lemon Tree Premier City Center Pune</option>
+            ﻿<option value="            OYO 9989 Hotel Classic Executive">            OYO 9989 Hotel Classic Executive</option>
+            ﻿<option value="            Hotel Ketan">            Hotel Ketan</option>
+            ﻿<option value="            Royal Orchid Central Pune">            Royal Orchid Central Pune</option>
+            ﻿<option value="            Residency club">            Residency club</option>
+            ﻿<option value="            JK Rooms 104 Hotel Madhav International">            JK Rooms 104 Hotel Madhav International</option>
+            ﻿<option value="            Phoenix Hotel">            Phoenix Hotel</option>
+            ﻿<option value="            Ramada Plaza by Wyndham Pune Hinjewadi">            Ramada Plaza by Wyndham Pune Hinjewadi</option>
+            ﻿<option value="            Treebo Trend Regency">            Treebo Trend Regency</option>
+            ﻿<option value="            Kohinoor Executive">            Kohinoor Executive</option>
+            ﻿<option value="            Lemon Tree Hotel, Hinjawadi, Pune">            Lemon Tree Hotel, Hinjawadi, Pune</option>
+            ﻿<option value="            Hotel Studio Estique">            Hotel Studio Estique</option>
+            ﻿<option value="            Centro">            Centro</option>
+            ﻿<option value="            Royal Orchid Golden Suites Pune">            Royal Orchid Golden Suites Pune</option>
+            ﻿<option value="            The Central Park Hotel">            The Central Park Hotel</option>
+            ﻿<option value="            Kyriad Hotel Chinchwad">            Kyriad Hotel Chinchwad</option>
+            ﻿<option value="            Treebo Trend Niraali Executive">            Treebo Trend Niraali Executive</option>
+            ﻿<option value="            AR Suites Fontana Bay">            AR Suites Fontana Bay</option>
+            ﻿<option value="            Enrise By Sayaji Pune">            Enrise By Sayaji Pune</option>
+            ﻿<option value="            Magnus Square">            Magnus Square</option>
+            ﻿<option value="            OYO 28029 Living Luxurious Studio Rooms">            OYO 28029 Living Luxurious Studio Rooms</option>
+            ﻿<option value="            OYO 28092 Vsn Hospitality">            OYO 28092 Vsn Hospitality</option>
+            ﻿<option value="            Mapple Adhwryou Pune">            Mapple Adhwryou Pune</option>
+            ﻿<option value="            Executive Tamanna Hotel Hinjawadi, Pune">            Executive Tamanna Hotel Hinjawadi, Pune</option>
+            ﻿<option value="            Hotel Pranav Executive">            Hotel Pranav Executive</option>
+            ﻿<option value="            Hotel The Samrat (Near Railway Station) Pune">            Hotel The Samrat (Near Railway Station) Pune</option>
+            ﻿<option value="            Hotel Deccan Pavilion Pune">            Hotel Deccan Pavilion Pune</option>
+            ﻿<option value="            Hotel Sapna">            Hotel Sapna</option>
+            ﻿<option value="            Spree Shivai Hotel">            Spree Shivai Hotel</option>
+            ﻿<option value="            The Dunes Continental">            The Dunes Continental</option>
+            ﻿<option value="            Kochi Marriott Hotel">            Kochi Marriott Hotel</option>
+            ﻿<option value="            Crowne Plaza Kochi">            Crowne Plaza Kochi</option>
+            ﻿<option value="            The Gateway Hotel Marine Drive Ernakulam">            The Gateway Hotel Marine Drive Ernakulam</option>
+            ﻿<option value="            Le Meridien Kochi">            Le Meridien Kochi</option>
+            ﻿<option value="            Novotel Kochi Infopark">            Novotel Kochi Infopark</option>
+            ﻿<option value="            Trident, Cochin">            Trident, Cochin</option>
+            ﻿<option value="            Radisson Blu Kochi">            Radisson Blu Kochi</option>
+            ﻿<option value="            Kent Baywatch Suites">            Kent Baywatch Suites</option>
+            ﻿<option value="            Ramada Resort by Wyndham Kochi">            Ramada Resort by Wyndham Kochi</option>
+            ﻿<option value="            Grand Hyatt Kochi Bolgatty">            Grand Hyatt Kochi Bolgatty</option>
+            ﻿<option value="            GINGER HOUSE MUSEUM HOTEL">            GINGER HOUSE MUSEUM HOTEL</option>
+            ﻿<option value="            ibis Kochi City Centre Hotel">            ibis Kochi City Centre Hotel</option>
+            ﻿<option value="            Thulasi Inn">            Thulasi Inn</option>
+            ﻿<option value="            Monsoon Empress">            Monsoon Empress</option>
+            ﻿<option value="            Grand Hotel">            Grand Hotel</option>
+            ﻿<option value="            Heavenly Homestay">            Heavenly Homestay</option>
+            ﻿<option value="            Vasundhara Sarovar Premiere">            Vasundhara Sarovar Premiere</option>
+            ﻿<option value="            Old Lighthouse Bristow Hotel">            Old Lighthouse Bristow Hotel</option>
+            ﻿<option value="            Abaam Hotel">            Abaam Hotel</option>
+            ﻿<option value="            Tissa's Inn">            Tissa's Inn</option>
+            ﻿<option value="            Hotel Fort Queen">            Hotel Fort Queen</option>
+            ﻿<option value="            Yuvarani Residency">            Yuvarani Residency</option>
+            ﻿<option value="            York Hotel Kochi">            York Hotel Kochi</option>
+            ﻿<option value="            Whitegate Residency">            Whitegate Residency</option>
+            ﻿<option value="            TRINITY AT FORT COCHIN">            TRINITY AT FORT COCHIN</option>
+            ﻿<option value="            Phoenix Holidays">            Phoenix Holidays</option>
+            ﻿<option value="            OYO 3633 Nanda Inn">            OYO 3633 Nanda Inn</option>
+            ﻿<option value="            Kapithan's Inn">            Kapithan's Inn</option>
+            ﻿<option value="            The Avenue Regent">            The Avenue Regent</option>
+            ﻿<option value="            The Wyte Fort Hotel">            The Wyte Fort Hotel</option>
+            ﻿<option value="            Imperial Regency">            Imperial Regency</option>
+            ﻿<option value="            Hotel Aiswarya">            Hotel Aiswarya</option>
+            ﻿<option value="            Reds Residency - Homestay">            Reds Residency - Homestay</option>
+            ﻿<option value="            Hotel Bright Heritage">            Hotel Bright Heritage</option>
+            ﻿<option value="            D Homz Suite">            D Homz Suite</option>
+            ﻿<option value="            Daffodils Spice Court">            Daffodils Spice Court</option>
+            ﻿<option value="            OYO 17222 Al Maray">            OYO 17222 Al Maray</option>
+            ﻿<option value="            PJ Princess Regency">            PJ Princess Regency</option>
+            ﻿<option value="            Elim Homestay">            Elim Homestay</option>
+            ﻿<option value="            Honolulu Home">            Honolulu Home</option>
+            ﻿<option value="            Travancore Court - by Spree">            Travancore Court - by Spree</option>
+            ﻿<option value="            Bharat Hotel">            Bharat Hotel</option>
+            ﻿<option value="            Gokulam Park">            Gokulam Park</option>
+            ﻿<option value="            IMA House">            IMA House</option>
+            ﻿<option value="            Grand Canyon">            Grand Canyon</option>
+            ﻿<option value="            The Dunes Cochin">            The Dunes Cochin</option>
+            ﻿<option value="            Forte Kochi">            Forte Kochi</option>
+            ﻿<option value="            OYO 4280 The City Gate Residency">            OYO 4280 The City Gate Residency</option>
+            ﻿<option value="            THE PGS VEDANTA COCHIN">            THE PGS VEDANTA COCHIN</option>
+            ﻿<option value="            Kondai Lip Backwater Heritage Resort">            Kondai Lip Backwater Heritage Resort</option>
+            ﻿<option value="            OYO 16711 Malabar Plaza Inn">            OYO 16711 Malabar Plaza Inn</option>
+            ﻿<option value="            Niko Hotels">            Niko Hotels</option>
+            ﻿<option value="            The Killians Boutique Hotel">            The Killians Boutique Hotel</option>
+            ﻿<option value="            The Classik Fort">            The Classik Fort</option>
+            ﻿<option value="            Keys Select Kochi - By Lemon Tree Hotels">            Keys Select Kochi - By Lemon Tree Hotels</option>
+            ﻿<option value="            Spring Field Billets">            Spring Field Billets</option>
+            ﻿<option value="            NM Royale County">            NM Royale County</option>
+            ﻿<option value="            Hotel Srinivas">            Hotel Srinivas</option>
+            ﻿<option value="            Ecolodge">            Ecolodge</option>
+            ﻿<option value="            Hotel Livanta">            Hotel Livanta</option>
+            ﻿<option value="            OYO 15973 F Square">            OYO 15973 F Square</option>
+            ﻿<option value="            Olive Eva">            Olive Eva</option>
+            ﻿<option value="            Nathan's Holiday Home">            Nathan's Holiday Home</option>
+            ﻿<option value="            Nature Villa">            Nature Villa</option>
+            ﻿<option value="            OYO 18938 Hotel Mars">            OYO 18938 Hotel Mars</option>
+            ﻿<option value="            OYO 22485 Tcs Suites">            OYO 22485 Tcs Suites</option>
+            ﻿<option value="            Prayana Hotels">            Prayana Hotels</option>
+            ﻿<option value="            OYO 27738 Ghala Residency Inn">            OYO 27738 Ghala Residency Inn</option>
+            ﻿<option value="            Oak Field Inn">            Oak Field Inn</option>
+            ﻿<option value="            The Anton Hotel">            The Anton Hotel</option>
+            ﻿<option value="            Hotel Presidency">            Hotel Presidency</option>
+            ﻿<option value="            SPOT ON 40646 Ppg Tourist Home">            SPOT ON 40646 Ppg Tourist Home</option>
+            ﻿<option value="            Sidra Pristine Hotel & Portico Halls">            Sidra Pristine Hotel & Portico Halls</option>
+            ﻿<option value="            Aura One Hotel">            Aura One Hotel</option>
+            ﻿<option value="            South Gate Residency">            South Gate Residency</option>
+            ﻿<option value="            Beith Annexe">            Beith Annexe</option>
+            ﻿<option value="            Four Points by Sheraton Kochi Infopark">            Four Points by Sheraton Kochi Infopark</option>
+            ﻿<option value="            Cochin Cove Homestay">            Cochin Cove Homestay</option>
+            ﻿<option value="            Madeleine Inn">            Madeleine Inn</option>
+            ﻿<option value="            OYO 4381 Hotel Parashar">            OYO 4381 Hotel Parashar</option>
+            ﻿<option value="            Arctic Hills By Opulence Hotels">            Arctic Hills By Opulence Hotels</option>
+            ﻿<option value="            The Ayali Prime">            The Ayali Prime</option>
+            ﻿<option value="            Hotel The Grace">            Hotel The Grace</option>
+            ﻿<option value="            Hotel Indira Nikunj">            Hotel Indira Nikunj</option>
+            ﻿<option value="            Hotel Ganesha Inn Ganga View">            Hotel Ganesha Inn Ganga View</option>
+            ﻿<option value="            Skyard Hostel">            Skyard Hostel</option>
+            ﻿<option value="            Hotel Samsara By The Ganges">            Hotel Samsara By The Ganges</option>
+            ﻿<option value="            Hotel Nirvana">            Hotel Nirvana</option>
+            ﻿<option value="            Ganga Forest View">            Ganga Forest View</option>
+            ﻿<option value="            MJ Hills by Opulence Hotels">            MJ Hills by Opulence Hotels</option>
+            ﻿<option value="            Rishikesh Grand By Lujo Hotels">            Rishikesh Grand By Lujo Hotels</option>
+            ﻿<option value="            Hotel Yog Vashishth">            Hotel Yog Vashishth</option>
+            ﻿<option value="            Hotel brijwasi palace">            Hotel brijwasi palace</option>
+            ﻿<option value="            Hotel SK International">            Hotel SK International</option>
+            ﻿<option value="            Divine Ganga Cottage">            Divine Ganga Cottage</option>
+            ﻿<option value="            Hotel Tapovan Cottage">            Hotel Tapovan Cottage</option>
+            ﻿<option value="            Holy River Hotel">            Holy River Hotel</option>
+            ﻿<option value="            Antalya">            Antalya</option>
+            ﻿<option value="            Hotel Shiva Yog Sthal">            Hotel Shiva Yog Sthal</option>
+            ﻿<option value="            Lemon Tree Premier, Rishikesh">            Lemon Tree Premier, Rishikesh</option>
+            ﻿<option value="            Hotel The Raja Palace">            Hotel The Raja Palace</option>
+            ﻿<option value="            The Ayali Rishikesh">            The Ayali Rishikesh</option>
+            ﻿<option value="            RishikeshStay">            RishikeshStay</option>
+            ﻿<option value="            Aloha On The Ganges, Rishikesh ( by Leisure Hotels )">            Aloha On The Ganges, Rishikesh ( by Leisure Hotels )</option>
+            ﻿<option value="            Hotel Peepal Tree">            Hotel Peepal Tree</option>
+            ﻿<option value="            Kamakshi Residency by Royal Collection">            Kamakshi Residency by Royal Collection</option>
+            ﻿<option value="            Hotel Aaravam Ganga">            Hotel Aaravam Ganga</option>
+            ﻿<option value="            Rishikesh Sadan">            Rishikesh Sadan</option>
+            ﻿<option value="            Shanti Residency Ganga View">            Shanti Residency Ganga View</option>
+            ﻿<option value="            Hotel Vedas Tapovan">            Hotel Vedas Tapovan</option>
+            ﻿<option value="            Hotel Gharonda">            Hotel Gharonda</option>
+            ﻿<option value="            Welcome Home Apartments">            Welcome Home Apartments</option>
+            ﻿<option value="            Dewa Retreat- A Himalayan Boutique Hotel">            Dewa Retreat- A Himalayan Boutique Hotel</option>
+            ﻿<option value="            Hotel Holiday Hill">            Hotel Holiday Hill</option>
+            ﻿<option value="            The Grand Alova - By The Ganges">            The Grand Alova - By The Ganges</option>
+            ﻿<option value="            Hotel Tulsi">            Hotel Tulsi</option>
+            ﻿<option value="            Raj Resort">            Raj Resort</option>
+            ﻿<option value="            Palm Bliss Resorts">            Palm Bliss Resorts</option>
+            ﻿<option value="            Yog Niketan by Sanskriti">            Yog Niketan by Sanskriti</option>
+            ﻿<option value="            Hotel Natraj">            Hotel Natraj</option>
+            ﻿<option value="            Maa Ganga Guest House">            Maa Ganga Guest House</option>
+            ﻿<option value="            UbEx Home Hermitage Rishikesh">            UbEx Home Hermitage Rishikesh</option>
+            ﻿<option value="            Hotel Tapovan Retreat">            Hotel Tapovan Retreat</option>
+            ﻿<option value="            Hotel City Ganga by Rudra Palace">            Hotel City Ganga by Rudra Palace</option>
+            ﻿<option value="            Flying Penguin">            Flying Penguin</option>
+            ﻿<option value="            Mango Tree Guest House">            Mango Tree Guest House</option>
+            ﻿<option value="            Backpacker Panda Rishikesh">            Backpacker Panda Rishikesh</option>
+            ﻿<option value="            Hipostel">            Hipostel</option>
+            ﻿<option value="            goStops Rishikesh">            goStops Rishikesh</option>
+            ﻿<option value="            Sonu Guest House">            Sonu Guest House</option>
+            ﻿<option value="            Bunk Stay Rishikesh">            Bunk Stay Rishikesh</option>
+            ﻿<option value="            Crowne Plaza Chennai Adyar Park">            Crowne Plaza Chennai Adyar Park</option>
+            ﻿<option value="            The Metroplace Hotels">            The Metroplace Hotels</option>
+            ﻿<option value="            Novotel Chennai Chamiers Road Hotel">            Novotel Chennai Chamiers Road Hotel</option>
+            ﻿<option value="            ULO Pearl Corporate Residency">            ULO Pearl Corporate Residency</option>
+            ﻿<option value="            S4 Residency">            S4 Residency</option>
+            ﻿<option value="            Syening Associates Near Sipcot IT Park">            Syening Associates Near Sipcot IT Park</option>
+            ﻿<option value="            Hotel Nachiappa Residency">            Hotel Nachiappa Residency</option>
+            ﻿<option value="            Kolam Elliots Beach">            Kolam Elliots Beach</option>
+            ﻿<option value="            The Belstead Chennai (Near US Consulate)">            The Belstead Chennai (Near US Consulate)</option>
+            ﻿<option value="            The Pride Hotel Chennai">            The Pride Hotel Chennai</option>
+            ﻿<option value="            Trident, Chennai">            Trident, Chennai</option>
+            ﻿<option value="            OYO 46738 Egmore Shelters">            OYO 46738 Egmore Shelters</option>
+            ﻿<option value="            Raaj Residency">            Raaj Residency</option>
+            ﻿<option value="            Hotel Sai Krish Grand">            Hotel Sai Krish Grand</option>
+            ﻿<option value="            Saibala Inn">            Saibala Inn</option>
+            ﻿<option value="            V7 Hotel">            V7 Hotel</option>
+            ﻿<option value="            Royal Regency Lifotel by Crossway">            Royal Regency Lifotel by Crossway</option>
+            ﻿<option value="            Zone by the Park ORR Chennai">            Zone by the Park ORR Chennai</option>
+            ﻿<option value="            Pebbles">            Pebbles</option>
+            ﻿<option value="            Ulo Millionaire Park">            Ulo Millionaire Park</option>
+            ﻿<option value="            Hotel Saravanaa">            Hotel Saravanaa</option>
+            ﻿<option value="            Hotel Apple Residency">            Hotel Apple Residency</option>
+            ﻿<option value="            Kalyan Hometel Vandalur">            Kalyan Hometel Vandalur</option>
+            ﻿<option value="            YWCA International Guest House">            YWCA International Guest House</option>
+            ﻿<option value="            OYO 22232 Hotel Continental & Lodge">            OYO 22232 Hotel Continental & Lodge</option>
+            ﻿<option value="            Capital O 50001 Krish Residency">            Capital O 50001 Krish Residency</option>
+            ﻿<option value="            LBD Resorts & Hotels">            LBD Resorts & Hotels</option>
+            ﻿<option value="            Altair">            Altair</option>
+            ﻿<option value="            Simi International - The Imperial">            Simi International - The Imperial</option>
+            ﻿<option value="            OYO 16703 Hotel The Platinum">            OYO 16703 Hotel The Platinum</option>
+            ﻿<option value="            Aster Guest House">            Aster Guest House</option>
+            ﻿<option value="            Golden Tulip Salt Lake City Kolkata">            Golden Tulip Salt Lake City Kolkata</option>
+            ﻿<option value="            Jo Rooms">            Jo Rooms</option>
+            ﻿<option value="            Hotel Echo Palace">            Hotel Echo Palace</option>
+            ﻿<option value="            Park Palace Hotel">            Park Palace Hotel</option>
+            ﻿<option value="            Aauris">            Aauris</option>
+            ﻿<option value="            Hotel Jaypee Inn">            Hotel Jaypee Inn</option>
+            ﻿<option value="            Pride Plaza Hotel, Kolkata">            Pride Plaza Hotel, Kolkata</option>
+            ﻿<option value="            Bh Boutique Hotel">            Bh Boutique Hotel</option>
+            ﻿<option value="            The Peerless Inn - Kolkata">            The Peerless Inn - Kolkata</option>
+            ﻿<option value="            Sumedha Premium">            Sumedha Premium</option>
+            ﻿<option value="            Vibe By The Lalit Traveller">            Vibe By The Lalit Traveller</option>
+            ﻿<option value="            Alpina Hotels & Suites">            Alpina Hotels & Suites</option>
+            ﻿<option value="            Country Inn & Suites by Radisson, Delhi Saket">            Country Inn & Suites by Radisson, Delhi Saket</option>
+            ﻿<option value="            bloom Boutique I GK 1">            bloom Boutique I GK 1</option>
+            ﻿<option value="            Hotel Swisston Palace">            Hotel Swisston Palace</option>
+            ﻿<option value="            Hotel Waterfall">            Hotel Waterfall</option>
+            ﻿<option value="            Hotel Citi International">            Hotel Citi International</option>
+            ﻿<option value="            Ahuja Residency Vista Signature">            Ahuja Residency Vista Signature</option>
+            ﻿<option value="            Hotel Comfort Zone Greater Kailash">            Hotel Comfort Zone Greater Kailash</option>
+            ﻿<option value="            Hotel Palace Heights">            Hotel Palace Heights</option>
+            ﻿<option value="            Hotel Rahul Palace">            Hotel Rahul Palace</option>
+            ﻿<option value="            Maidens Hotel, Delhi">            Maidens Hotel, Delhi</option>
+            ﻿<option value="            Hotel Ajanta">            Hotel Ajanta</option>
+            ﻿<option value="            Olive Studio Rooms">            Olive Studio Rooms</option>
+            ﻿<option value="            Hotel Airport Twilight">            Hotel Airport Twilight</option>
+            ﻿<option value="            Hotel Cavendish">            Hotel Cavendish</option>
+            ﻿<option value="            Dewdrop Intercity Hotel">            Dewdrop Intercity Hotel</option>
+            ﻿<option value="            Hotel Swati">            Hotel Swati</option>
+            ﻿<option value="            The Muse Sarovar Portico - Nehru Place">            The Muse Sarovar Portico - Nehru Place</option>
+            ﻿<option value="            Rockland Hotel - C R Park">            Rockland Hotel - C R Park</option>
+            ﻿<option value="            OYO 46183 New Tech India">            OYO 46183 New Tech India</option>
+            ﻿<option value="            Hotel The Royal Plaza">            Hotel The Royal Plaza</option>
+            ﻿<option value="            Moon Residency">            Moon Residency</option>
+            ﻿<option value="            Hotel Tourist Palace">            Hotel Tourist Palace</option>
+            ﻿<option value="            Aloft New Delhi Aerocity">            Aloft New Delhi Aerocity</option>
+            ﻿<option value="            Hide Away Suites">            Hide Away Suites</option>
+            ﻿<option value="            Four Points by Sheraton New Delhi, Airport Highway">            Four Points by Sheraton New Delhi, Airport Highway</option>
+            ﻿<option value="            The Westin Gurgaon, New Delhi">            The Westin Gurgaon, New Delhi</option>
+            ﻿<option value="            Holiday Inn New Delhi International Airport">            Holiday Inn New Delhi International Airport</option>
+            ﻿<option value="            Le Meridien New Delhi">            Le Meridien New Delhi</option>
+            ﻿<option value="            Crowne Plaza Hotel New Delhi Okhla">            Crowne Plaza Hotel New Delhi Okhla</option>
+            ﻿<option value="            Crowne Plaza New Delhi Mayur Vihar Noida">            Crowne Plaza New Delhi Mayur Vihar Noida</option>
+            ﻿<option value="            JW Marriott Hotel New Delhi Aerocity">            JW Marriott Hotel New Delhi Aerocity</option>
+            ﻿<option value="            OYO 30462 Hotel Ivy">            OYO 30462 Hotel Ivy</option>
+            ﻿<option value="            Treebo Trend Nysha Palace">            Treebo Trend Nysha Palace</option>
+            ﻿<option value="            OYO 44094 Grand Inn">            OYO 44094 Grand Inn</option>
+            ﻿<option value="            Holiday Inn New Delhi Mayur Vihar Noida">            Holiday Inn New Delhi Mayur Vihar Noida</option>
+            ﻿<option value="            Hotel Classic Diplomat">            Hotel Classic Diplomat</option>
+            ﻿<option value="            Jashn's Inn">            Jashn's Inn</option>
+            ﻿<option value="            Lemon Tree Hotel, Udyog Vihar, Gurugram">            Lemon Tree Hotel, Udyog Vihar, Gurugram</option>
+            ﻿<option value="            OYO 10750 Hotel Vivek">            OYO 10750 Hotel Vivek</option>
+            ﻿<option value="            The JRD Luxury Botique Hotel">            The JRD Luxury Botique Hotel</option>
+            ﻿<option value="            Emblem Hotel, New Friends Colony">            Emblem Hotel, New Friends Colony</option>
+            ﻿<option value="            bloomrooms @ Link Road">            bloomrooms @ Link Road</option>
+            ﻿<option value="            Hotel Sun View International">            Hotel Sun View International</option>
+            ﻿<option value="            Royal Mansion">            Royal Mansion</option>
+            ﻿<option value="            Hukam's Holiday Home">            Hukam's Holiday Home</option>
+            ﻿<option value="            The Hosteller Kasol">            The Hosteller Kasol</option>
+            ﻿<option value="            Nomads Hostel">            Nomads Hostel</option>
+            ﻿<option value="            Highland Choj">            Highland Choj</option>
+            ﻿<option value="            Wonderland Tourist Camp">            Wonderland Tourist Camp</option>
+            ﻿<option value="            Hotel 18 Keys">            Hotel 18 Keys</option>
+            ﻿<option value="            Rajhans Regency">            Rajhans Regency</option>
+            ﻿<option value="            Hotel Park View">            Hotel Park View</option>
+            ﻿<option value="            OYO 3901 Hotel Ashoka Palace">            OYO 3901 Hotel Ashoka Palace</option>
+            ﻿<option value="            Hotel Nirmal Residency">            Hotel Nirmal Residency</option>
+            ﻿<option value="            OYO 13822 Kolar Hotel">            OYO 13822 Kolar Hotel</option>
+            ﻿<option value="            OYO 28360 Hotel Rajdeep">            OYO 28360 Hotel Rajdeep</option>
+            ﻿<option value="            OYO 14577 Vijay Palace">            OYO 14577 Vijay Palace</option>
+            ﻿<option value="            OYO 27658 Hotel New Mohit Regency">            OYO 27658 Hotel New Mohit Regency</option>
+            ﻿<option value="            OYO 13376 Hotel Shri Vilas">            OYO 13376 Hotel Shri Vilas</option>
+            ﻿<option value="            OYO 2681 Hotel Madhuram palace">            OYO 2681 Hotel Madhuram palace</option>
+            ﻿<option value="            OYO 12127 Radhika Palace">            OYO 12127 Radhika Palace</option>
+            ﻿<option value="            Dia Park Premier">            Dia Park Premier</option>
+            ﻿<option value="            Holiday Inn Gurugram Sector 90">            Holiday Inn Gurugram Sector 90</option>
+            ﻿<option value="            The Oberoi Gurgaon">            The Oberoi Gurgaon</option>
+            ﻿<option value="            Vintage Villa">            Vintage Villa</option>
+            ﻿<option value="            Imperial Apartments">            Imperial Apartments</option>
+            ﻿<option value="            Sparklin Suites">            Sparklin Suites</option>
+            ﻿<option value="            Inde Hotel Cyber City">            Inde Hotel Cyber City</option>
+            ﻿<option value="            Hyatt Regency Gurgaon">            Hyatt Regency Gurgaon</option>
+            ﻿<option value="            Trident, Gurgaon">            Trident, Gurgaon</option>
+            ﻿<option value="            Hotel Grenville">            Hotel Grenville</option>
+            ﻿<option value="            Levante Hotel">            Levante Hotel</option>
+            ﻿<option value="            HYDEWEST INDIA">            HYDEWEST INDIA</option>
+            ﻿<option value="            Krishna Coddle Executive">            Krishna Coddle Executive</option>
+            ﻿<option value="            Liveinn Style">            Liveinn Style</option>
+            ﻿<option value="            Ambrosia By ZiffyHomes">            Ambrosia By ZiffyHomes</option>
+            ﻿<option value="            The Bristol Hotel">            The Bristol Hotel</option>
+            ﻿<option value="            Aadat Residency">            Aadat Residency</option>
+            ﻿<option value="            Olive Serviced Apartments Gurgaon">            Olive Serviced Apartments Gurgaon</option>
+            ﻿<option value="            CoRoomS SanVi Prime Unitech Cyber Park">            CoRoomS SanVi Prime Unitech Cyber Park</option>
+            ﻿<option value="            Gazebo Inn And Suites">            Gazebo Inn And Suites</option>
+            ﻿<option value="            JK Rooms 143 Amazone Holiday Guest House">            JK Rooms 143 Amazone Holiday Guest House</option>
+            ﻿<option value="            Radisson Gurugram Sohna Road City Center">            Radisson Gurugram Sohna Road City Center</option>
+            ﻿<option value="            Jade By ZiffyHomes">            Jade By ZiffyHomes</option>
+            ﻿<option value="            Aakritii Hotels">            Aakritii Hotels</option>
+            ﻿<option value="            Olive Cozy stays">            Olive Cozy stays</option>
+            ﻿<option value="            Lemon Tree Hotel Sohna Road">            Lemon Tree Hotel Sohna Road</option>
+            ﻿<option value="            Bellagio Inn & Suites">            Bellagio Inn & Suites</option>
+            ﻿<option value="            Urban Key House">            Urban Key House</option>
+            ﻿<option value="            Platinum Infrasource">            Platinum Infrasource</option>
+            ﻿<option value="            Ahuja Residency Cyber City I">            Ahuja Residency Cyber City I</option>
+            ﻿<option value="            AAN HOTEL">            AAN HOTEL</option>
+            ﻿<option value="            Pacific Inn Suryansh Hotel">            Pacific Inn Suryansh Hotel</option>
+            ﻿<option value="            SKY CITY HOTEL">            SKY CITY HOTEL</option>
+            ﻿<option value="            OYO 26915 Hotel North East Residency">            OYO 26915 Hotel North East Residency</option>
+            ﻿<option value="            When In Gurgaon - Service Apartments, Opp. Artemis Hospital">            When In Gurgaon - Service Apartments, Opp. Artemis Hospital</option>
+            ﻿<option value="            Smart Inn-1">            Smart Inn-1</option>
+            ﻿<option value="            Bawa Residency">            Bawa Residency</option>
+            ﻿<option value="            The Habitare Gurgaon">            The Habitare Gurgaon</option>
+            ﻿<option value="            The Royal Crown">            The Royal Crown</option>
+            ﻿<option value="            OYO 9422 Prime">            OYO 9422 Prime</option>
+            ﻿<option value="            Crowne Plaza Hotel Gurgaon">            Crowne Plaza Hotel Gurgaon</option>
+            ﻿<option value="            Hotel Haut Monde">            Hotel Haut Monde</option>
+            ﻿<option value="            OYO 19751 Parkview Residency">            OYO 19751 Parkview Residency</option>
+            ﻿<option value="            OYO 29687 Sunny Guest House">            OYO 29687 Sunny Guest House</option>
+            ﻿<option value="            Ginger Manesar">            Ginger Manesar</option>
+            ﻿<option value="            OYO 14777 Summer Homez">            OYO 14777 Summer Homez</option>
+            ﻿<option value="            Smart Villa 5 by Royal Collection">            Smart Villa 5 by Royal Collection</option>
+            ﻿<option value="            SWASNO HOTELS PVT LTD">            SWASNO HOTELS PVT LTD</option>
+            ﻿<option value="            Excel Inn">            Excel Inn</option>
+            ﻿<option value="            Hotel La Residence">            Hotel La Residence</option>
+            ﻿<option value="            OYO 12471 SKS PREMIUM">            OYO 12471 SKS PREMIUM</option>
+            ﻿<option value="            OYO 13555 Niketan Medanta">            OYO 13555 Niketan Medanta</option>
+            ﻿<option value="            Tavisha Villa">            Tavisha Villa</option>
+            ﻿<option value="            The Maple Leaf DLF Cyber City">            The Maple Leaf DLF Cyber City</option>
+            ﻿<option value="            Perch Arbor Golf Course Road">            Perch Arbor Golf Course Road</option>
+            ﻿<option value="            The Mayflower">            The Mayflower</option>
+            ﻿<option value="            Hotel City Premier">            Hotel City Premier</option>
+            ﻿<option value="            OYO 4131 Glen Thirty">            OYO 4131 Glen Thirty</option>
+            ﻿<option value="            OYO 16953 The Grace Residency">            OYO 16953 The Grace Residency</option>
+            ﻿<option value="            OYO 16759 Sukhsagar">            OYO 16759 Sukhsagar</option>
+            ﻿<option value="            Hotel Smart Villa IV by Royal Collection">            Hotel Smart Villa IV by Royal Collection</option>
+            ﻿<option value="            Lemon Tree Premier 1, Gurugram">            Lemon Tree Premier 1, Gurugram</option>
+            ﻿<option value="            OYO 8317 Sector 31">            OYO 8317 Sector 31</option>
+            ﻿<option value="            New Bawa Residency">            New Bawa Residency</option>
+            ﻿<option value="            OYO 13843 DS Cyber Residency">            OYO 13843 DS Cyber Residency</option>
+            ﻿<option value="            OYO 17425 Dwarka Palace">            OYO 17425 Dwarka Palace</option>
+            ﻿<option value="            OYO 567 Hotel Lime Tree Hospitality">            OYO 567 Hotel Lime Tree Hospitality</option>
+            ﻿<option value="            Ahuja Residency Gurgaon">            Ahuja Residency Gurgaon</option>
+            ﻿<option value="            DoubleTree by Hilton Hotel Gurgaon - New Delhi NCR">            DoubleTree by Hilton Hotel Gurgaon - New Delhi NCR</option>
+            ﻿<option value="            Hotel Smart Villa By Royal Collection">            Hotel Smart Villa By Royal Collection</option>
+            ﻿<option value="            Hotel Kartik Inns">            Hotel Kartik Inns</option>
+            ﻿<option value="            Zone by the Park Gurgaon">            Zone by the Park Gurgaon</option>
+            ﻿<option value="            Lemon Tree Hotel, Sector 60, Gurugram">            Lemon Tree Hotel, Sector 60, Gurugram</option>
+            ﻿<option value="            101Stays Medanta">            101Stays Medanta</option>
+            ﻿<option value="            bloom Boutique | Signature Towers">            bloom Boutique | Signature Towers</option>
+            ﻿<option value="            The Acura BMK">            The Acura BMK</option>
+            ﻿<option value="            Golden Tulip Vasundhara">            Golden Tulip Vasundhara</option>
+            ﻿<option value="            Hotel Aarkay Palace">            Hotel Aarkay Palace</option>
+            ﻿<option value="            Ahuja Residency Sector 44 Noida">            Ahuja Residency Sector 44 Noida</option>
+            ﻿<option value="            Radisson Blu Hotel Noida">            Radisson Blu Hotel Noida</option>
+            ﻿<option value="            Yu Turn Townhouse">            Yu Turn Townhouse</option>
+            ﻿<option value="            OYO 12779 5 seas Hotel and Banquet">            OYO 12779 5 seas Hotel and Banquet</option>
+            ﻿<option value="            GINGER Noida City Center">            GINGER Noida City Center</option>
+            ﻿<option value="            Hotel Vizima 62">            Hotel Vizima 62</option>
+            ﻿<option value="            The Icon">            The Icon</option>
+            ﻿<option value="            Hotel Belmorrise">            Hotel Belmorrise</option>
+            ﻿<option value="            Hotel B&B INN">            Hotel B&B INN</option>
+            ﻿<option value="            Hotel Blue Pearl Noida">            Hotel Blue Pearl Noida</option>
+            ﻿<option value="            Savoy Suites Noida">            Savoy Suites Noida</option>
+            ﻿<option value="            Sovereign Residency">            Sovereign Residency</option>
+            ﻿<option value="            Hotel P.K. Residency">            Hotel P.K. Residency</option>
+            ﻿<option value="            Hyphen Business Hotel">            Hyphen Business Hotel</option>
+            ﻿<option value="            Sandal Suites Op. by Lemon Tree Hotels">            Sandal Suites Op. by Lemon Tree Hotels</option>
+            ﻿<option value="            Ascent Biz Hotel">            Ascent Biz Hotel</option>
+            ﻿<option value="            Mosaic Hotels">            Mosaic Hotels</option>
+            ﻿<option value="            OYO 270 Home Stay Inn">            OYO 270 Home Stay Inn</option>
+            ﻿<option value="            Mahagun Sarovar Portico Suites">            Mahagun Sarovar Portico Suites</option>
+            ﻿<option value="            Nirula's Hotel">            Nirula's Hotel</option>
+            ﻿<option value="            PDR Shree Balram">            PDR Shree Balram</option>
+            ﻿<option value="            OYO 421 One Hotel">            OYO 421 One Hotel</option>
+            ﻿<option value="            OYO 26782 Mehak Palace">            OYO 26782 Mehak Palace</option>
+            ﻿<option value="            Hotel White Castle">            Hotel White Castle</option>
+            ﻿<option value="            Hello Stay Green">            Hello Stay Green</option>
+            ﻿<option value="            OYO 10661 DSR Classic">            OYO 10661 DSR Classic</option>
+            ﻿<option value="            Radisson Blu Towers Kaushambi Delhi NCR">            Radisson Blu Towers Kaushambi Delhi NCR</option>
+            ﻿<option value="            PDR Shree Krishna">            PDR Shree Krishna</option>
+            ﻿<option value="            OYO 14454 Celebration BnB Home">            OYO 14454 Celebration BnB Home</option>
+            ﻿<option value="            Hotel Green View Palace">            Hotel Green View Palace</option>
+            ﻿<option value="            Hotel Samrat Kaushambi">            Hotel Samrat Kaushambi</option>
+            ﻿<option value="            OYO 19889 The Mirage">            OYO 19889 The Mirage</option>
+            ﻿<option value="            OYO 380 Hotel Atithee Residency">            OYO 380 Hotel Atithee Residency</option>
+            ﻿<option value="            Hoel Sunshine Inn">            Hoel Sunshine Inn</option>
+            ﻿<option value="            OYO Flagship 046 Vaishali Max Hospital">            OYO Flagship 046 Vaishali Max Hospital</option>
+            ﻿<option value="            Kumar Residency">            Kumar Residency</option>
+            ﻿<option value="            OYO 11925 Krishna 26">            OYO 11925 Krishna 26</option>
+            ﻿<option value="            Fortune Inn Grazia, Noida - Member ITC Hotel Group">            Fortune Inn Grazia, Noida - Member ITC Hotel Group</option>
+            ﻿<option value="            OYO 19134 The Signature Hotel">            OYO 19134 The Signature Hotel</option>
+            ﻿<option value="            OYO 9935 Hotel Mango House">            OYO 9935 Hotel Mango House</option>
+            ﻿<option value="            OYO 4029 Cosy Tree Rooms">            OYO 4029 Cosy Tree Rooms</option>
+            ﻿<option value="            Park Ascent">            Park Ascent</option>
+            ﻿<option value="            Hotel Vacanza">            Hotel Vacanza</option>
+            ﻿<option value="            Hotel Castle In">            Hotel Castle In</option>
+            ﻿<option value="            OYO 22968 Galaxy Homes">            OYO 22968 Galaxy Homes</option>
+            ﻿<option value="            OYO 9192 Hotel Raghav Residency">            OYO 9192 Hotel Raghav Residency</option>
+            ﻿<option value="            FabHotel Ivy Inn">            FabHotel Ivy Inn</option>
+            ﻿<option value="            OYO 15124 Vizima Crossroad">            OYO 15124 Vizima Crossroad</option>
+            ﻿<option value="            Hotel Vizima Palace">            Hotel Vizima Palace</option>
+            ﻿<option value="            OYO 14246 Onella Rooms">            OYO 14246 Onella Rooms</option>
+            ﻿<option value="            Hotel Sunshine Park">            Hotel Sunshine Park</option>
+            ﻿<option value="            Hotel Loto - Sector 15">            Hotel Loto - Sector 15</option>
+            ﻿<option value="            Hotel Kashish Residency & Banquet">            Hotel Kashish Residency & Banquet</option>
+            ﻿<option value="            OYO 15834 Shubhangni Residency">            OYO 15834 Shubhangni Residency</option>
+            ﻿<option value="            OYO 37169 Hotel Quadis">            OYO 37169 Hotel Quadis</option>
+            ﻿<option value="            OYO 3593 Fragrance Habitat">            OYO 3593 Fragrance Habitat</option>
+            ﻿<option value="            OYO 1391 Hotel Pushpa Vilas">            OYO 1391 Hotel Pushpa Vilas</option>
+            ﻿<option value="            Treebo Trip Sswag 18">            Treebo Trip Sswag 18</option>
+            ﻿<option value="            OYO 28366 Ram & Sons Residency">            OYO 28366 Ram & Sons Residency</option>
+            ﻿<option value="            OYO 48900 Grand & Epic Inn">            OYO 48900 Grand & Epic Inn</option>
+            ﻿<option value="            OYO 2895 Cosy Tree Rooms">            OYO 2895 Cosy Tree Rooms</option>
+            ﻿<option value="            OYO 10664 Aone INN">            OYO 10664 Aone INN</option>
+            ﻿<option value="            OYO 49486 Star Rooms">            OYO 49486 Star Rooms</option>
+            ﻿<option value="            OYO 9527 Hotel Mascot Quattro">            OYO 9527 Hotel Mascot Quattro</option>
+            ﻿<option value="            OYO 28706 Navish Residency">            OYO 28706 Navish Residency</option>
+            ﻿<option value="            OYO 14654 BRS HOMES">            OYO 14654 BRS HOMES</option>
+            ﻿<option value="            OYO 49535 Attrap Residency">            OYO 49535 Attrap Residency</option>
+            ﻿<option value="            Ginger Noida Sector 63">            Ginger Noida Sector 63</option>
+            ﻿<option value="            OYO 15516 J S Garden">            OYO 15516 J S Garden</option>
+            ﻿<option value="            OYO 19898 Royal Paradise">            OYO 19898 Royal Paradise</option>
+            ﻿<option value="            Hotel Loto">            Hotel Loto</option>
+            ﻿<option value="            OYO 18669 Shree Palce">            OYO 18669 Shree Palce</option>
+            ﻿<option value="            OYO 40669 Shree G Palace">            OYO 40669 Shree G Palace</option>
+            ﻿<option value="            Lemon Tree Hotel, East Delhi Mall, Kaushambi">            Lemon Tree Hotel, East Delhi Mall, Kaushambi</option>
+            ﻿<option value="            OYO 15929 Comfort Residency">            OYO 15929 Comfort Residency</option>
+            ﻿<option value="            OYO 10177 A Gulshan Continental">            OYO 10177 A Gulshan Continental</option>
+            ﻿<option value="            OYO 6340 Glorify Stay 3">            OYO 6340 Glorify Stay 3</option>
+            ﻿<option value="            OYO 11452 Golden Castle Lodge">            OYO 11452 Golden Castle Lodge</option>
+            ﻿<option value="            OYO 15625 Royal logix">            OYO 15625 Royal logix</option>
+            ﻿<option value="            OYO 28629 Hotel Crosswind">            OYO 28629 Hotel Crosswind</option>
+            ﻿<option value="            OYO 28011 Shubhangni Residency 2">            OYO 28011 Shubhangni Residency 2</option>
+            ﻿<option value="            Hotel Sita(place on heritage ghats of benaras)">            Hotel Sita(place on heritage ghats of benaras)</option>
+            ﻿<option value="            Vijaigarh kothi">            Vijaigarh kothi</option>
+            ﻿<option value="            Hotel King's Banaras">            Hotel King's Banaras</option>
+            ﻿<option value="            Hotel Buddha">            Hotel Buddha</option>
+            ﻿<option value="            Guleria Kothi">            Guleria Kothi</option>
+            ﻿<option value="            Dwivedi Hotels Sri Omkar Palace">            Dwivedi Hotels Sri Omkar Palace</option>
+            ﻿<option value="            Somit Paying Guest House">            Somit Paying Guest House</option>
+            ﻿<option value="            Hotel Janki Inn Varanasi">            Hotel Janki Inn Varanasi</option>
+            ﻿<option value="            Ramada Plaza by Wyndham JHV Varanasi">            Ramada Plaza by Wyndham JHV Varanasi</option>
+            ﻿<option value="            Hotel Pinnacle Gate">            Hotel Pinnacle Gate</option>
+            ﻿<option value="            Dwivedi Hotels Hotel Elena">            Dwivedi Hotels Hotel Elena</option>
+            ﻿<option value="            Castillo">            Castillo</option>
+            ﻿<option value="            Hotel Mastana Palace">            Hotel Mastana Palace</option>
+            ﻿<option value="            Starlit Select Nirvana">            Starlit Select Nirvana</option>
+            ﻿<option value="            Square Inn">            Square Inn</option>
+            ﻿<option value="            BrijRama Palace - A Heritage Hotel">            BrijRama Palace - A Heritage Hotel</option>
+            ﻿<option value="            Hotel Shivoy Grand">            Hotel Shivoy Grand</option>
+            ﻿<option value="            Varanasi Paradise">            Varanasi Paradise</option>
+            ﻿<option value="            Hotel Costa River">            Hotel Costa River</option>
+            ﻿<option value="            The Century Plaza Hotel">            The Century Plaza Hotel</option>
+            ﻿<option value="            Shree Ganesha Residency">            Shree Ganesha Residency</option>
+            ﻿<option value="            Hotel City Inn Varanasi">            Hotel City Inn Varanasi</option>
+            ﻿<option value="            Ganga Monastery">            Ganga Monastery</option>
+            ﻿<option value="            Hotel Alka">            Hotel Alka</option>
+            ﻿<option value="            Hotel Augusto">            Hotel Augusto</option>
+            ﻿<option value="            Hotel Dolphin International">            Hotel Dolphin International</option>
+            ﻿<option value="            Hotel Sarweshwary">            Hotel Sarweshwary</option>
+            ﻿<option value="            Safarnama Varanasi">            Safarnama Varanasi</option>
+            ﻿<option value="            Hotel Clarks">            Hotel Clarks</option>
+            ﻿<option value="            OYO 15530 Hotel G S Residency">            OYO 15530 Hotel G S Residency</option>
+            ﻿<option value="            Hotel Tridev">            Hotel Tridev</option>
+            ﻿<option value="            Srishti Shelter">            Srishti Shelter</option>
+            ﻿<option value="            HOTEL SAHU">            HOTEL SAHU</option>
+            ﻿<option value="            Hotel Balaji International">            Hotel Balaji International</option>
+            ﻿<option value="            New Hotel Broadway">            New Hotel Broadway</option>
+            ﻿<option value="            Family Guest House">            Family Guest House</option>
+            ﻿<option value="            Rivatas">            Rivatas</option>
+            ﻿<option value="            Hotel SGT Plaza">            Hotel SGT Plaza</option>
+            ﻿<option value="            A Palace on River - Rashmi guest House">            A Palace on River - Rashmi guest House</option>
+            ﻿<option value="            Rahul Guest House">            Rahul Guest House</option>
+            ﻿<option value="            Moustache Varanasi">            Moustache Varanasi</option>
+            ﻿<option value="            Divine Destination">            Divine Destination</option>
+            ﻿<option value="            Amritara Suryauday Haveli">            Amritara Suryauday Haveli</option>
+            ﻿<option value="            Hotel Ganges Grand">            Hotel Ganges Grand</option>
+            ﻿<option value="            HOTEL AADESH PALACE">            HOTEL AADESH PALACE</option>
+            ﻿<option value="            Hotel Plaza inn">            Hotel Plaza inn</option>
+            ﻿<option value="            Palace on Ganges">            Palace on Ganges</option>
+            ﻿<option value="            OYO 22406 Shree Shree Guest House">            OYO 22406 Shree Shree Guest House</option>
+            ﻿<option value="            36 Avenue">            36 Avenue</option>
+            ﻿<option value="            Hotel Heritage inn">            Hotel Heritage inn</option>
+            ﻿<option value="            Hotel Vikram Palace">            Hotel Vikram Palace</option>
+            ﻿<option value="            The India Benares">            The India Benares</option>
+            ﻿<option value="            Vandana Residency">            Vandana Residency</option>
+            ﻿<option value="            Hotel MRK">            Hotel MRK</option>
+            ﻿<option value="            Hotel Abhinav International">            Hotel Abhinav International</option>
+            ﻿<option value="            Hotel Varanasi Inn">            Hotel Varanasi Inn</option>
+            ﻿<option value="            Hotel HKJ Residency">            Hotel HKJ Residency</option>
+            ﻿<option value="            OYO 4009 Hotel HKJ Palace">            OYO 4009 Hotel HKJ Palace</option>
+            ﻿<option value="            Hotel Rivera Palace">            Hotel Rivera Palace</option>
+            ﻿<option value="            Hotel Ganesha">            Hotel Ganesha</option>
+            ﻿<option value="            Hotel Central Residency">            Hotel Central Residency</option>
+            ﻿<option value="            Ganga Darshanam Guest House">            Ganga Darshanam Guest House</option>
+            ﻿<option value="            Palace on steps">            Palace on steps</option>
+            ﻿<option value="            Mastana Palace">            Mastana Palace</option>
+            ﻿<option value="            Hotel Silk City">            Hotel Silk City</option>
+            ﻿<option value="            Hotel SLE Residency">            Hotel SLE Residency</option>
+            ﻿<option value="            Hotel Zeeras">            Hotel Zeeras</option>
+            ﻿<option value="            Hotel Shivratri Guest House">            Hotel Shivratri Guest House</option>
+            ﻿<option value="            OYO 23416 Maharaja Hotel">            OYO 23416 Maharaja Hotel</option>
+            ﻿<option value="            Hotel Yash Residency Assi Ghat & Bhu">            Hotel Yash Residency Assi Ghat & Bhu</option>
+            ﻿<option value="            Shree Hare rama hare krishna guest house">            Shree Hare rama hare krishna guest house</option>
+            ﻿<option value="            Hotel Utsav Residency">            Hotel Utsav Residency</option>
+            ﻿<option value="            goStops Varanasi">            goStops Varanasi</option>
+            ﻿<option value="            On The Ghat by Howdy Hostels">            On The Ghat by Howdy Hostels</option>
+            ﻿<option value="            Babu Guest house">            Babu Guest house</option>
+            ﻿<option value="            Taj Tirupati">            Taj Tirupati</option>
+            ﻿<option value="            Hotel Ramcharan Residency">            Hotel Ramcharan Residency</option>
+            ﻿<option value="            Minerva Grand">            Minerva Grand</option>
+            ﻿<option value="            Fortune Select Grand Ridge-Member ITC">            Fortune Select Grand Ridge-Member ITC</option>
+            ﻿<option value="            Kences, Tirupati">            Kences, Tirupati</option>
+            ﻿<option value="            Iroomz Sri Srinivasa Residency">            Iroomz Sri Srinivasa Residency</option>
+            ﻿<option value="            Jayaram Residency Tirupathi">            Jayaram Residency Tirupathi</option>
+            ﻿<option value="            Best Western Tirupati">            Best Western Tirupati</option>
+            ﻿<option value="            Raj Park Tirupati">            Raj Park Tirupati</option>
+            ﻿<option value="            Ramee Guestline Hotel TIRUPATI">            Ramee Guestline Hotel TIRUPATI</option>
+            ﻿<option value="            NB Venkaeswara Grand Inn">            NB Venkaeswara Grand Inn</option>
+            ﻿<option value="            Marasa Sarovar Premiere">            Marasa Sarovar Premiere</option>
+            ﻿<option value="            Hotel Bliss">            Hotel Bliss</option>
+            ﻿<option value="            Treebo Trip Riyas Grand">            Treebo Trip Riyas Grand</option>
+            ﻿<option value="            OYO 28216 Raajas Grand">            OYO 28216 Raajas Grand</option>
+            ﻿<option value="            Treebo Trend Sls Grand">            Treebo Trend Sls Grand</option>
+            ﻿<option value="            SPOT ON 44158 Madarasu Smart Homes">            SPOT ON 44158 Madarasu Smart Homes</option>
+            ﻿<option value="            Hotel PLR Grand">            Hotel PLR Grand</option>
+            ﻿<option value="            HOTEL ANNAPURNA">            HOTEL ANNAPURNA</option>
+            ﻿<option value="            Kalyan Residency">            Kalyan Residency</option>
+            ﻿<option value="            Golden Pearl Inn">            Golden Pearl Inn</option>
+            ﻿<option value="            LNB Residency">            LNB Residency</option>
+            ﻿<option value="            Sujan Residencys">            Sujan Residencys</option>
+            ﻿<option value="            OYO 27936 Hotel Welcome Tirupati">            OYO 27936 Hotel Welcome Tirupati</option>
+            ﻿<option value="            OYO 16982 Stay Inn Tirupati">            OYO 16982 Stay Inn Tirupati</option>
+            ﻿<option value="            Novotel Visakhapatnam Varun Beach Hotel">            Novotel Visakhapatnam Varun Beach Hotel</option>
+            ﻿<option value="            Dolphin Hotel">            Dolphin Hotel</option>
+            ﻿<option value="            WelcomHotel Devee Grand Bay - Member ITC‚Äôs hotel group">            WelcomHotel Devee Grand Bay - Member ITC‚Äôs hotel group</option>
+            ﻿<option value="            Ginger Vishakhapatnam Gajuwaka">            Ginger Vishakhapatnam Gajuwaka</option>
+            ﻿<option value="            Keys Select Visakhapatnam - By Lemon Tree Hotels">            Keys Select Visakhapatnam - By Lemon Tree Hotels</option>
+            ﻿<option value="            Vizag Conventions">            Vizag Conventions</option>
+            ﻿<option value="            Fairfield by Marriott Visakapatnam">            Fairfield by Marriott Visakapatnam</option>
+            ﻿<option value="            Daspalla Executive Court">            Daspalla Executive Court</option>
+            ﻿<option value="            Rockdale Clarks Inn Suites">            Rockdale Clarks Inn Suites</option>
+            ﻿<option value="            OYO 7317 Sree Darshini">            OYO 7317 Sree Darshini</option>
+            ﻿<option value="            Best Western Ramachandra">            Best Western Ramachandra</option>
+            ﻿<option value="            Fortune Inn Sree Kanya, Visakhapatnam - Member ITC Hotel Group">            Fortune Inn Sree Kanya, Visakhapatnam - Member ITC Hotel Group</option>
+            ﻿<option value="            Four Points by Sheraton Visakhapatnam">            Four Points by Sheraton Visakhapatnam</option>
+            ﻿<option value="            Best Western Plus Tejvivaan">            Best Western Plus Tejvivaan</option>
+            ﻿<option value="            Ginger Vishakhapatnam, Dwarka Nagar">            Ginger Vishakhapatnam, Dwarka Nagar</option>
+            ﻿<option value="            Daspalla Hotel Visakhapatnam">            Daspalla Hotel Visakhapatnam</option>
+            ﻿<option value="            Rohini Jazz Hotel">            Rohini Jazz Hotel</option>
+            ﻿<option value="            Treebo Trend PL Grand Vishakapatnam">            Treebo Trend PL Grand Vishakapatnam</option>
+            ﻿<option value="            Treebo Trend Celeste">            Treebo Trend Celeste</option>
+            ﻿<option value="            The Port Hotel">            The Port Hotel</option>
+            ﻿<option value="            Hotel Lakshmi Residency">            Hotel Lakshmi Residency</option>
+            ﻿<option value="            Hotel Winsar Park">            Hotel Winsar Park</option>
+            ﻿<option value="            OYO 8929 Home Stay Siddhartha Residency">            OYO 8929 Home Stay Siddhartha Residency</option>
+            ﻿<option value="            OYO 5660 Hotel Sree Residency">            OYO 5660 Hotel Sree Residency</option>
+            ﻿<option value="            Treebo Trend Excella">            Treebo Trend Excella</option>
+            ﻿<option value="            Shree Laxmi Guest House">            Shree Laxmi Guest House</option>
+            ﻿<option value="            Hotel Sai National">            Hotel Sai National</option>
+            ﻿<option value="            OYO 24936 Hotel C-9">            OYO 24936 Hotel C-9</option>
+            ﻿<option value="            Hotel Ratnawali">            Hotel Ratnawali</option>
+            ﻿<option value="            Hotel Vijay Niwas">            Hotel Vijay Niwas</option>
+            ﻿<option value="            Ramada by Wyndham Jaipur Jaisinghpura">            Ramada by Wyndham Jaipur Jaisinghpura</option>
+            ﻿<option value="            Chitrakatha">            Chitrakatha</option>
+            ﻿<option value="            OYO 15154 Hotel River Side">            OYO 15154 Hotel River Side</option>
+            ﻿<option value="            Nirbana Palace-A Heritage Hotel">            Nirbana Palace-A Heritage Hotel</option>
+            ﻿<option value="            Umaid Bhawan - A Heritage Style Boutique Hotel">            Umaid Bhawan - A Heritage Style Boutique Hotel</option>
+            ﻿<option value="            Talai Bagh Palace">            Talai Bagh Palace</option>
+            ﻿<option value="            OYO 19597 Pink Palace">            OYO 19597 Pink Palace</option>
+            ﻿<option value="            Arya Niwas">            Arya Niwas</option>
+            ﻿<option value="            Shivoham Yoga retreats">            Shivoham Yoga retreats</option>
+            ﻿<option value="            Hotel Blue Heaven">            Hotel Blue Heaven</option>
+            ﻿<option value="            Raj Rajeshwari Haveli">            Raj Rajeshwari Haveli</option>
+            ﻿<option value="            Hotel Classic Inn">            Hotel Classic Inn</option>
+            ﻿<option value="            Hotel Dior">            Hotel Dior</option>
+            ﻿<option value="            Krishna Palace">            Krishna Palace</option>
+            ﻿<option value="            Ikaki Niwas">            Ikaki Niwas</option>
+            ﻿<option value="            FabHotel The Lodge">            FabHotel The Lodge</option>
+            ﻿<option value="            Hotel Shikha">            Hotel Shikha</option>
+            ﻿<option value="            OYO 30231 Hotel Anshu">            OYO 30231 Hotel Anshu</option>
+            ﻿<option value="            Ramada by Wyndham Jaipur">            Ramada by Wyndham Jaipur</option>
+            ﻿<option value="            Park Inn Jaipur">            Park Inn Jaipur</option>
+            ﻿<option value="            OYO 1152 Sodala">            OYO 1152 Sodala</option>
+            ﻿<option value="            Hotel Sarang Palace">            Hotel Sarang Palace</option>
+            ﻿<option value="            Capital O 23134 Hotel Radiant Star">            Capital O 23134 Hotel Radiant Star</option>
+            ﻿<option value="            OYO 7589 Le Park Street">            OYO 7589 Le Park Street</option>
+            ﻿<option value="            Hotel Shree Raj Laxmi Palace">            Hotel Shree Raj Laxmi Palace</option>
+            ﻿<option value="            OYO 22204 Mark Inn">            OYO 22204 Mark Inn</option>
+            ﻿<option value="            OYO 1656 Hotel Mandela House">            OYO 1656 Hotel Mandela House</option>
+            ﻿<option value="            Shahpura Residency">            Shahpura Residency</option>
+            ﻿<option value="            OYO 29096 Hotel Jaipur Park Paradise">            OYO 29096 Hotel Jaipur Park Paradise</option>
+            ﻿<option value="            Hotel Paradise">            Hotel Paradise</option>
+            ﻿<option value="            Chokhi Dhani Resort Jaipur">            Chokhi Dhani Resort Jaipur</option>
+            ﻿<option value="            Hotel Metropolitan">            Hotel Metropolitan</option>
+            ﻿<option value="            Barwara Kothi">            Barwara Kothi</option>
+            ﻿<option value="            OYO 23108 Hotel Bagga Vilas">            OYO 23108 Hotel Bagga Vilas</option>
+            ﻿<option value="            Sanskar Hotel">            Sanskar Hotel</option>
+            ﻿<option value="            Hyatt Regency Lucknow">            Hyatt Regency Lucknow</option>
+            ﻿<option value="            Renaissance Lucknow Hotel">            Renaissance Lucknow Hotel</option>
+            ﻿<option value="            India Awadh">            India Awadh</option>
+            ﻿<option value="            Hotel Nexus">            Hotel Nexus</option>
+            ﻿<option value="            Ratana International">            Ratana International</option>
+            ﻿<option value="            Levana Suites">            Levana Suites</option>
+            ﻿<option value="            Ramada by Wyndham Lucknow">            Ramada by Wyndham Lucknow</option>
+            ﻿<option value="            OYO 14767 Welcome Inn">            OYO 14767 Welcome Inn</option>
+            ﻿<option value="            The Piccadily Lucknow">            The Piccadily Lucknow</option>
+            ﻿<option value="            Hotel Millenia Regency">            Hotel Millenia Regency</option>
+            ﻿<option value="            Hotel Maple Delite">            Hotel Maple Delite</option>
+            ﻿<option value="            La Place Sarovar Portico, Lucknow">            La Place Sarovar Portico, Lucknow</option>
+            ﻿<option value="            Comfort Hotel Elite">            Comfort Hotel Elite</option>
+            ﻿<option value="            Hotel Metro Continental">            Hotel Metro Continental</option>
+            ﻿<option value="            Levana Hotel">            Levana Hotel</option>
+            ﻿<option value="            JB Skyhilton Inn">            JB Skyhilton Inn</option>
+            ﻿<option value="            Hotel Ranbirs">            Hotel Ranbirs</option>
+            ﻿<option value="            Lemon Tree Hotel Lucknow">            Lemon Tree Hotel Lucknow</option>
+            ﻿<option value="            Treebo Trend Shivam inn">            Treebo Trend Shivam inn</option>
+            ﻿<option value="            Cygnett Park Di- Arch">            Cygnett Park Di- Arch</option>
+            ﻿<option value="            Golden Tulip Lucknow">            Golden Tulip Lucknow</option>
+            ﻿<option value="            Novotel Lucknow Gomti Nagar Hotel">            Novotel Lucknow Gomti Nagar Hotel</option>
+            ﻿<option value="            OYO 6842 Garden Gates Inn">            OYO 6842 Garden Gates Inn</option>
+            ﻿<option value="            OYO 19996 4 Season">            OYO 19996 4 Season</option>
+            ﻿<option value="            OYO 13478 Hotel Surabhi Garden">            OYO 13478 Hotel Surabhi Garden</option>
+            ﻿<option value="            Ginger Hotel Lucknow">            Ginger Hotel Lucknow</option>
+            ﻿<option value="            OYO 11046 Hotel Lake View">            OYO 11046 Hotel Lake View</option>
+            ﻿<option value="            Clarks Avadh">            Clarks Avadh</option>
+            ﻿<option value="            OYO 5285 Apartment Impact Associates">            OYO 5285 Apartment Impact Associates</option>
+            ﻿<option value="            Sapna Clarks Inn">            Sapna Clarks Inn</option>
+            ﻿<option value="            The Grand Radiant">            The Grand Radiant</option>
+            ﻿<option value="            OYO 28356 True Power">            OYO 28356 True Power</option>
+            ﻿<option value="            ANR Hotels">            ANR Hotels</option>
+            ﻿<option value="            Deep Clarks Inn Lucknow">            Deep Clarks Inn Lucknow</option>
+            ﻿<option value="            Hotel Europe Plaza">            Hotel Europe Plaza</option>
+            ﻿<option value="            OYO 49061 Hotel Green Retreat">            OYO 49061 Hotel Green Retreat</option>
+            ﻿<option value="            OYO 6844 Hotel Impact">            OYO 6844 Hotel Impact</option>
+            ﻿<option value="            OYO 23009 Hotel Maxx">            OYO 23009 Hotel Maxx</option>
+            ﻿<option value="            Hotel Deep Avadh">            Hotel Deep Avadh</option>
+            ﻿<option value="            Hotel Deep Palace">            Hotel Deep Palace</option>
+            ﻿<option value="            Central Hotel">            Central Hotel</option>
+            ﻿<option value="            Hotel Aryan">            Hotel Aryan</option>
+            ﻿<option value="            Hotel Sunrise Inn">            Hotel Sunrise Inn</option>
+            ﻿<option value="            OYO 8243 Climat Inn">            OYO 8243 Climat Inn</option>
+            ﻿<option value="            OYO 35484 Travellers inn">            OYO 35484 Travellers inn</option>
+            ﻿<option value="            OYO 24232 Mj International">            OYO 24232 Mj International</option>
+            ﻿<option value="            OYO 8379 Hotel Kamal">            OYO 8379 Hotel Kamal</option>
+            ﻿<option value="            Clarks Collection Lucknow Gomti Nagar">            Clarks Collection Lucknow Gomti Nagar</option>
+            ﻿<option value="            Treebo Metro Inn">            Treebo Metro Inn</option>
+            ﻿<option value="            Desire Villa">            Desire Villa</option>
+            ﻿<option value="            Elite Suites Mint Gomti Nagar">            Elite Suites Mint Gomti Nagar</option>
+            ﻿<option value="            OYO 13234 Hotel Mahak">            OYO 13234 Hotel Mahak</option>
+            ﻿<option value="            OYO 7162 Home Stay Shikhar Paradise">            OYO 7162 Home Stay Shikhar Paradise</option>
+            ﻿<option value="            OYO 14615 Aastha Krishna Dham">            OYO 14615 Aastha Krishna Dham</option>
+            ﻿<option value="            OYO 23207 Hotel Raj Shree">            OYO 23207 Hotel Raj Shree</option>
+            ﻿<option value="            OYO 19004 Hotel Gagan">            OYO 19004 Hotel Gagan</option>
+            ﻿<option value="            OYO 23206 Hotel Sky View">            OYO 23206 Hotel Sky View</option>
+            ﻿<option value="            OYO 22662 Hotel Shivam">            OYO 22662 Hotel Shivam</option>
+            ﻿<option value="            OYO 28416 Ananya Royals">            OYO 28416 Ananya Royals</option>
+            ﻿<option value="            OYO 19192 Hotel New Metro">            OYO 19192 Hotel New Metro</option>
+            ﻿<option value="            OYO 9740 Hotel Him Sagar">            OYO 9740 Hotel Him Sagar</option>
+            ﻿<option value="            OYO 38733 The Sai Palace">            OYO 38733 The Sai Palace</option>
+            ﻿<option value="            OYO 16736 Hotel Hm Crystal">            OYO 16736 Hotel Hm Crystal</option>
+            ﻿<option value="            OYO 8959 New DK Palace">            OYO 8959 New DK Palace</option>
+            ﻿<option value="            Hotel Central Park">            Hotel Central Park</option>
+            ﻿<option value="            The Toy Hotel">            The Toy Hotel</option>
+            ﻿<option value="            OYO 10537 Star City Inn">            OYO 10537 Star City Inn</option>
+            ﻿<option value="            Hotel Grand Way">            Hotel Grand Way</option>
+            ﻿<option value="            Hotel Lazeeno Classic">            Hotel Lazeeno Classic</option>
+            ﻿<option value="            OYO 4548 Hotel Tom Stay">            OYO 4548 Hotel Tom Stay</option>
+            ﻿<option value="            OYO 14030 Cheema Holiday Homes">            OYO 14030 Cheema Holiday Homes</option>
+            ﻿<option value="            OYO 16695 Hotel Sun View">            OYO 16695 Hotel Sun View</option>
+            ﻿<option value="            Hotel Orbit-34">            Hotel Orbit-34</option>
+            ﻿<option value="            SPOT ON 49328 Sukh Motel">            SPOT ON 49328 Sukh Motel</option>
+            ﻿<option value="            Hotel Orbit">            Hotel Orbit</option>
+            ﻿<option value="            OYO 38170 Hotel Grand Plaza">            OYO 38170 Hotel Grand Plaza</option>
+            ﻿<option value="            OYO 24142 Hotel Smart King">            OYO 24142 Hotel Smart King</option>
+            ﻿<option value="            OYO 3987 Hotel Multitech">            OYO 3987 Hotel Multitech</option>
+            ﻿<option value="            Hotel Pride">            Hotel Pride</option>
+            ﻿<option value="            OYO 38616 Hotel Jeevak">            OYO 38616 Hotel Jeevak</option>
+            ﻿<option value="            Treebo Trip Kamron">            Treebo Trip Kamron</option>
+            ﻿<option value="            OYO 33009 Hotel Nido">            OYO 33009 Hotel Nido</option>
+            ﻿<option value="            OYO 15486 Hotel New Diamond">            OYO 15486 Hotel New Diamond</option>
+            ﻿<option value="            OYO 1933 Hotel City Paradise">            OYO 1933 Hotel City Paradise</option>
+            ﻿<option value="            OYO 5785 Silver One">            OYO 5785 Silver One</option>
+            ﻿<option value="            OYO 27061 Hotel Magnum">            OYO 27061 Hotel Magnum</option>
+            ﻿<option value="            Cama Hotel">            Cama Hotel</option>
+            ﻿<option value="            Hyatt Regency Ahmedabad">            Hyatt Regency Ahmedabad</option>
+            ﻿<option value="            hotel suncity">            hotel suncity</option>
+            ﻿<option value="            Capital O 891 Hotel Kadamb Inn">            Capital O 891 Hotel Kadamb Inn</option>
+            ﻿<option value="            Hotel Sunstar Inn">            Hotel Sunstar Inn</option>
+            ﻿<option value="            The Ummed Ahmedabad Airport">            The Ummed Ahmedabad Airport</option>
+            ﻿<option value="            Hotel Eden">            Hotel Eden</option>
+            ﻿<option value="            OYO 4161 Hotel Shailly Inn">            OYO 4161 Hotel Shailly Inn</option>
+            ﻿<option value="            OYO 11427 Hotel Kalyan">            OYO 11427 Hotel Kalyan</option>
+            ﻿<option value="            OYO 2178 Vibrant Residency">            OYO 2178 Vibrant Residency</option>
+            ﻿<option value="            OYO 27638 Jay Radhe">            OYO 27638 Jay Radhe</option>
+            ﻿<option value="            Lemon Tree Hotel, Ahmedabad">            Lemon Tree Hotel, Ahmedabad</option>
+   
+            
+        </select><br>
+
+
+        <label>
+        <strong> City</strong>
+        </lablel>
+        <select name="city" id="city">
+            <option value="Mumbai">Mumbai</option>
+            ﻿<option value="Pune">Pune</option>
+            ﻿<option value="Munnar">Munnar</option>
+            ﻿<option value="New Delhi">New Delhi</option>
+            ﻿<option value="Nagpur">Nagpur</option>
+            ﻿<option value="Hyderabad">Hyderabad</option>
+            ﻿<option value="Chennai">Chennai</option>
+            ﻿<option value="Ahmedabad">Ahmedabad</option>
+            ﻿<option value="Kolkata">Kolkata</option>
+            ﻿<option value="Kullu">Kullu</option>
+            ﻿<option value="Jaipur">Jaipur</option>
+            ﻿<option value="Delhi">Delhi</option>
+            ﻿<option value="Chandigarh">Chandigarh</option>
+            ﻿<option value="Bhopal">Bhopal</option>
+            ﻿<option value="Kochi">Kochi</option>
+            ﻿<option value="Rishikesh">Rishikesh</option>
+            ﻿<option value="Leh">Leh</option>
+            ﻿<option value="Gurgaon">Gurgaon</option>
+            ﻿<option value="Noida">Noida</option>
+            ﻿<option value="Varanasi">Varanasi</option>
+            ﻿<option value="Tirupati, Andhra Pradesh, India">Tirupati, Andhra Pradesh, India</option>
+            ﻿<option value="Visakhapatnam, Andhra Pradesh, India">Visakhapatnam, Andhra Pradesh, India</option>
+            ﻿<option value="Lucknow">Lucknow</option>
+        </select><br>
+        
+        <label> 
+        <strong> Pool </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="pool">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="pool" align="left"><br>
+        
+        
+        
+         <label> 
+        <strong> Gym </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="gym">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="gym"><br>
+        
+        
+        
+        <label> 
+        <strong> Spa </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="spa">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="spa"><br>
+        
+        
+        
+        <label> 
+        <strong> Free Parking </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="free_parking">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="free_parking"><br>
+        
+        
+        <label> 
+        <strong> Bathtub </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="bathtub">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="bathtub"><br>
+        
+        
+        <label> 
+        <strong> Restuarant </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="restuarant">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="restuarant"><br>
+        
+        
+        <label> 
+        <strong> Airport Transfer </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="Airport_transfer">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="Airport_transfer"><br>
+        
+        
+        
+        <label> 
+        <strong> Bar </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="Bar">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="Bar"><br>
+        
+        
+        
+        <label> 
+        <strong> Kitchen </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="Kitchen">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="Kitchen"><br>
+        
+        <label> 
+        <strong> Connecting Rooms </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="Connecting_rooms_available">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="Connecting_rooms_available"><br>
+        
+        <label> 
+        <strong> Internet Access </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="Internet_access">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="Internet_access"><br>
+        
+        <label> 
+        <strong> Pet Friendly </strong>
+        </label>
+        <label>Yes</label>
+        <input type="radio"  value="yes" name="Pet_friendly">
+        
+        
+        <label>No</label>
+        </label>
+        <input type="radio"  value="no" name="Pet_friendly"><br>
+        
+        
+        
+        
+         <label>
+        <strong> City Center </strong>
+        
+        </label>
+        <select name="City Center" id="City Center">
+            <option value="20">20</option>
+            ﻿<option value="2.3">2.3</option>
+            ﻿<option value="19">19</option>
+            ﻿<option value="16">16</option>
+            ﻿<option value="6.8">6.8</option>
+            ﻿<option value="24">24</option>
+            ﻿<option value="7.4">7.4</option>
+            ﻿<option value="1.2">1.2</option>
+            ﻿<option value="25">25</option>
+            ﻿<option value="13">13</option>
+            ﻿<option value="15">15</option>
+            ﻿<option value="6.9">6.9</option>
+            ﻿<option value="18">18</option>
+            ﻿<option value="1.5">1.5</option>
+            ﻿<option value="22">22</option>
+            ﻿<option value="1.3">1.3</option>
+            ﻿<option value="9.1">9.1</option>
+            ﻿<option value="21">21</option>
+            ﻿<option value="0.3">0.3</option>
+            ﻿<option value="23">23</option>
+            ﻿<option value="0.7">0.7</option>
+            ﻿<option value="17">17</option>
+            ﻿<option value="1.7">1.7</option>
+            ﻿<option value="26">26</option>
+            ﻿<option value="2">2</option>
+            ﻿<option value="14">14</option>
+            ﻿<option value="10">10</option>
+            ﻿<option value="8.8">8.8</option>
+            ﻿<option value="12">12</option>
+            ﻿<option value="8.5">8.5</option>
+            ﻿<option value="4.7">4.7</option>
+            ﻿<option value="11">11</option>
+            ﻿<option value="7.2">7.2</option>
+            ﻿<option value="9.9">9.9</option>
+            ﻿<option value="8.3">8.3</option>
+            ﻿<option value="7.5">7.5</option>
+            ﻿<option value="7.8">7.8</option>
+            ﻿<option value="8.1">8.1</option>
+            ﻿<option value="8.6">8.6</option>
+            ﻿<option value="7">7</option>
+            ﻿<option value="7.9">7.9</option>
+            ﻿<option value="7.1">7.1</option>
+            ﻿<option value="5.9">5.9</option>
+            ﻿<option value="6.7">6.7</option>
+            ﻿<option value="8.2">8.2</option>
+            ﻿<option value="9.2">9.2</option>
+            ﻿<option value="0.6">0.6</option>
+            ﻿<option value="0.9">0.9</option>
+            ﻿<option value="0.5">0.5</option>
+            ﻿<option value="1.1">1.1</option>
+            ﻿<option value="0.2">0.2</option>
+            ﻿<option value="0.4">0.4</option>
+            ﻿<option value="9.7">9.7</option>
+            ﻿<option value="6.3">6.3</option>
+            ﻿<option value="1.9">1.9</option>
+            ﻿<option value="3.4">3.4</option>
+            ﻿<option value="2.6">2.6</option>
+            ﻿<option value="3.8">3.8</option>
+            ﻿<option value="0.8">0.8</option>
+            ﻿<option value="3.6">3.6</option>
+            ﻿<option value="3">3</option>
+            ﻿<option value="3.7">3.7</option>
+            ﻿<option value="4.5">4.5</option>
+            ﻿<option value="1.4">1.4</option>
+            ﻿<option value="1.8">1.8</option>
+            ﻿<option value="4.8">4.8</option>
+            ﻿<option value="8.4">8.4</option>
+            ﻿<option value="6.1">6.1</option>
+            ﻿<option value="2.8">2.8</option>
+            ﻿<option value="3.9">3.9</option>
+            ﻿<option value="3.5">3.5</option>
+            ﻿<option value="9.4">9.4</option>
+            ﻿<option value="9.3">9.3</option>
+            ﻿<option value="8.7">8.7</option>
+            ﻿<option value="4.9">4.9</option>
+            ﻿<option value="7.7">7.7</option>
+            ﻿<option value="9">9</option>
+            ﻿<option value="4.6">4.6</option>
+            ﻿<option value="4">4</option>
+            ﻿<option value="2.9">2.9</option>
+            ﻿<option value="5.5">5.5</option>
+            ﻿<option value="6">6</option>
+            ﻿<option value="6.4">6.4</option>
+            ﻿<option value="5.7">5.7</option>
+            ﻿<option value="6.5">6.5</option>
+            ﻿<option value="3.1">3.1</option>
+            ﻿<option value="5.2">5.2</option>
+            ﻿<option value="3.2">3.2</option>
+            ﻿<option value="2.1">2.1</option>
+            ﻿<option value="9.8">9.8</option>
+            ﻿<option value="4.2">4.2</option>
+            ﻿<option value="5.4">5.4</option>
+            ﻿<option value="5.8">5.8</option>
+            ﻿<option value="9.6">9.6</option>
+            ﻿<option value="5.6">5.6</option>
+            ﻿<option value="1.6">1.6</option>
+            ﻿<option value="5">5</option>
+            ﻿<option value="4.4">4.4</option>
+            ﻿<option value="2.2">2.2</option>
+            ﻿<option value="4.3">4.3</option>
+            ﻿<option value="7.3">7.3</option>
+            ﻿<option value="7.6">7.6</option>
+            ﻿<option value="9.5">9.5</option>
+            ﻿<option value="1">1</option>
+            ﻿<option value="8">8</option>
+            ﻿<option value="8.9">8.9</option>
+            ﻿<option value="6.6">6.6</option>
+            ﻿<option value="0.1">0.1</option>
+            ﻿<option value="2.7">2.7</option>
+            ﻿<option value="6.2">6.2</option>
+            ﻿<option value="3.3">3.3</option>
+            ﻿<option value="4.1">4.1</option>
+            ﻿<option value="2.5">2.5</option>
+            ﻿<option value="5.3">5.3</option>
+            ﻿<option value="5.1">5.1</option>
+            ﻿<option value="2.4">2.4</option>
+    </select><br>
+        
+        
+        <label>
+        <strong> Day_in </strong>
+        
+        </label>
+        <select name="day_in" id="day_in">
+            <option value="12">12</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+        </select><br>
+        
+        <label>
+        <strong> Month </strong>
+        
+        </label>
+        <select name="month" id="month">
+            <option value="02">02</option>
+        </select><br>
+        
+        <label>
+        <strong> Year </strong>
+        
+        </label>
+        <select name="year" id="year">
+            <option value="2021">2021</option>
+        </select><br>
+        
+        
+        
+        <label>
+        <strong> day_out</strong>
+        
+        </label>
+        <select name="day_out" id="day_out">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <opton value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+        </select><br>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <button type="submit" class="btn btn primary btn-block-btn-large">predict</button>
+    </form>
+    
+    <br>
+    <br>
+    {{ prediction_text }}
+  
+</div>
+</cente>
+</body>
+</html>
+    
+    
+
+
+        
+        
+    
+
+  
