@@ -1,6 +1,7 @@
 
 
 body {
+  background-color: #f8f9fe;
   font-family: Open Sans, sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -8,11 +9,11 @@ body {
   margin: 0;
   text-align: left;
   color: #525f7f;
-  background-color: #f8f9fe;
+  
 /*   background-image: url("hotels.jpg"); */
-  background-repeat: no-repeat, repeat;
+/*   background-repeat: no-repeat, repeat;
   background-position: center; /* Center the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+/*   background-size: cover; /* Resize the background image to cover the entire container */ */ */
 }
 
 [tabindex='-1']:focus {
