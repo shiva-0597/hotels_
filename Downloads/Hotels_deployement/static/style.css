@@ -9,7 +9,7 @@ body {
   text-align: left;
   color: #525f7f;
   background-color: #f8f9fe;
-  background-image: url("hotels.jpg");
+/*   background-image: url("hotels.jpg"); */
   background-repeat: no-repeat, repeat;
   background-position: center; /* Center the image */
   background-size: cover; /* Resize the background image to cover the entire container */
