@@ -16,7 +16,7 @@ body {
 /*   background-size: cover; /* Resize the background image to cover the entire container */ */ */
 }
 
-[tabindex='-1']:focus {
+/* [tabindex='-1']:focus {
   outline: 0 !important;
 }
 
@@ -24,4 +24,4 @@ body {
   width: 60%;
   margin: 20px;
   
-}
+} */
